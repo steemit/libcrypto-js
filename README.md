@@ -48,9 +48,9 @@ SecretKey { getPublicKey: [Function], sign: [Function] }
 > secretKey.getPublicKey().toString()
 'STM5pZ15FDVAvNKW3saTJchWmSSmYtEvA6aKiXwDtCq2JRZV9KtR9'
 > secretSig = secretKey.sign(new Uint8Array(32).buffer)
-ArrayBuffer { byteLength: 64 }
+ArrayBuffer { byteLength: 65 }
 > crypto.hexify(secretSig)
-'387d5f9ae215a64065fde2a9d4f7be83d3480b7cc89f7c01488042da348845408909e9d4f1d66466c53f0007c771a73bf2883d8d5ab4735b5b4316091361442c'
+'20387d5f9ae215a64065fde2a9d4f7be83d3480b7cc89f7c01488042da348845408909e9d4f1d66466c53f0007c771a73bf2883d8d5ab4735b5b4316091361442c'
 ```
 
 ### crypto.PublicKey
@@ -61,6 +61,8 @@ Provides operations over Steemit secp256k1-based ECC public keys.
 ... 
 > publicKey.verify(new Uint8Array(32).buffer, secretSig)
 true
+> PublicKey.recover(someHash, someSig)
+...
 ```
 
 ### crypto.generateKeys()

@@ -1,3 +1,66 @@
+new sjcl.test.TestCase("steemit signature test vectors", function(cb) {
+
+  var hash = sjcl.hash.sha256.hash([]);
+  var self = this;
+
+  sjcl.test.vector.steemitsig.forEach(function(fixture) {
+  
+    var secretKey = sjcl.codec.steemit.deserializeSecretKey(fixture.secretKey);
+    var publicKey = sjcl.codec.steemit.deserializePublicKey(fixture.publicKey);
+
+    fixture.signatures.forEach(function(signature) {
+      var k = new sjcl.bn(signature.k);
+      var r = new sjcl.bn(signature.r);
+      var s = new sjcl.bn(signature.s);
+
+      var sig = sjcl.bitArray.concat(r.toBits(256), s.toBits(256));
+      publicKey.verify(hash, sig);
+
+      var generatedSig = sjcl.codec.steemit.signRecoverably(secretKey, hash, 0, k);
+
+      self.require(
+        sjcl.bitArray.equal(sjcl.bitArray.bitSlice(generatedSig, 8, 264), r.toBits(256)),
+        'our recoverably generated r is identical to the nonrecoverably generated one'
+      );
+      self.require(
+        sjcl.bitArray.equal(sjcl.bitArray.bitSlice(generatedSig, 264), s.toBits(256)),
+        'our recoverably generated s is identical to the nonrecoverably generated one'
+      );
+
+      var recoveredPublicKey = sjcl.codec.steemit.recoverPublicKey(hash, generatedSig);
+
+      publicKey.verify(hash, sjcl.bitArray.bitSlice(generatedSig, 8));
+
+      self.require(
+        fixture.publicKey === sjcl.codec.steemit.serializePublicKey(recoveredPublicKey),
+        'our recovered public key is the right one'
+      );
+
+    });
+    
+  });
+
+  cb();
+});
+
+
+new sjcl.test.TestCase("steemit signature core functionality", function(cb) {
+   
+  var keys = {
+    sec: sjcl.codec.steemit.deserializeSecretKey("5JamTPvZyQsHf8c2pbN92F1gUY3sJkpW3ZJFzdmfbAJPAXT5aw3"),
+    pub: sjcl.codec.steemit.deserializePublicKey("STM5SKxjN1YdrFLgoPcp9KteUmNVdgE8DpTPC9sF6jbjVqP9d2Utq")
+  };
+ 
+  var fakehash = sjcl.hash.sha256.hash([1]);
+  var sig = sjcl.codec.steemit.signRecoverably(keys.sec, fakehash, 0, new sjcl.bn(19));
+  this.require(
+    keys.pub.verify(fakehash, sjcl.bitArray.bitSlice(sig, 8)),
+    'signature passes verification'
+  );
+
+  cb();
+});
+
 new sjcl.test.TestCase("steemit key codec tests", function (cb) {
  
   var testValues = [{
@@ -49,7 +112,7 @@ new sjcl.test.TestCase("steemit key codec tests", function (cb) {
       "original and deserialized secret keys are identical"
     );
 
-  } 
+  }
   
   cb();
 });

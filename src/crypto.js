@@ -24,6 +24,8 @@
     return sjcl;
   })();
 
+  exports.sjcl = sjcl;
+
   function SecretKey(sec, pub) {
     // we deliberately avoid exposing secret key material on the instance.
     // this is paranoid and probably doesn't protect against a determined
@@ -40,7 +42,7 @@
     };
 
     this.sign = function(hash) {
-      return fromBits(sec.sign(toBits(hash)));
+      return fromBits(sjcl.codec.steemit.signRecoverably(sec, toBits(hash)));
     };
   }
 
@@ -56,13 +58,21 @@
     return new PublicKey(sjcl.codec.steemit.deserializePublicKey(str));
   };
 
+  PublicKey.recover = function(hash, sig) {
+    return new PublicKey(
+      sjcl.codec.steemit.recoverPublicKey(toBits(hash), toBits(sig))
+    );
+  };
+
   PublicKey.prototype = {
     toString: function() {
       return sjcl.codec.steemit.serializePublicKey(this._p);
     },
     verify: function(hash, signature) {
       try {
-        return this._p.verify(toBits(hash), toBits(signature));
+        var rawSig = sjcl.bitArray.bitSlice(toBits(signature), 8);
+        this._p.verify(toBits(hash), rawSig);
+        return true;
       } catch (_) {
         return false;
       }
@@ -71,7 +81,6 @@
 
   function generateKeys() {
     var k = sjcl.ecc.ecdsa.generateKeys(sjcl.ecc.curves.k256);
-
     return serializePair(k);
   }
 
@@ -124,6 +133,6 @@
   }
 
   function fromBits(a) {
-    return sjcl.codec.arrayBuffer.fromBits(a, false);
+    return sjcl.codec.arrayBuffer.fromBits(a, 0, 0);
   }
 });
