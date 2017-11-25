@@ -1,18 +1,18 @@
 /* eslint-env node */
 
-exports.run = buildSjcl;
+exports.run = build;
 
 var config = require('./config');
 var file = require('./lib/file');
 
 if (require.main === module) {
-  buildSjcl().catch(function(error) {
+  build().catch(function(error) {
     console.error(error); // eslint-disable-line no-console
     process.exit(1);
   });
 }
 
-function buildSjcl() {
+function build() {
   return file
     .mkdirP('lib')
     .then(function() {
