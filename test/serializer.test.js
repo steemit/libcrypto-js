@@ -1,9 +1,23 @@
 
 var test = require('tape');
+var crypto = require('../lib/crypto');
 var serializer = require('../lib/serializer');
 var EVIL_STRINGS = require('./evil-strings.json');
 
 var ctx;
+
+var MAX_SAFE_INTEGER = Math.pow(2, 53) - 1;
+
+function hexify(buf) {
+  var str = '0x';
+  for (var i = 0; i < buf.length; i++) {
+    if (buf[i] < 16) {
+      str += '0';
+    }
+    str += buf[i].toString(16);
+  }
+  return str;
+}
 
 test('codePointAt', function(t) {
   var testStr = 'w\u{1d306}';
@@ -85,7 +99,7 @@ test('uint16', function(t) {
   t.equal(result.length, 6, '3 uint16s should be 6 bytes long');
   t.deepEqual(result, new Uint8Array([
     0,0,
-    1,0,
+    0,1,
     255,255
   ]), 'data should be written with correct endianness');
 
@@ -108,9 +122,9 @@ test('int16', function(t) {
   t.equal(result.length, 8, '4 int16s should be 8 bytes long');
   t.deepEqual(result, new Uint8Array([
     0,0,
-    1,0,
-    128,0,
-    127,255
+    0,1,
+    0,128,
+    255,127
   ]), 'data should be written with correct endianness using 2s complement');
 
   t.end();
@@ -131,7 +145,7 @@ test('uint32', function(t) {
   t.equal(result.length, 12, '3 uint32s should be 12 bytes long');
   t.deepEqual(result, new Uint8Array([
     0, 0, 0, 0,
-    1, 0, 0, 0,
+    0, 0, 0, 1,
     255,255,255,255
   ]), 'data should be written with correct endianness');
 
@@ -156,12 +170,48 @@ test('int32', function(t) {
   
   t.equal(result.length, 16, 'four int32s should be 16 bytes long');
   t.deepEqual(result, new Uint8Array([
-    128, 0, 0, 0,
-    255, 0, 0, 0,
+    0, 0, 0, 128,
+    0, 0, 0, 255,
     0, 0, 0, 0,
-    127,255,255,255
+    255,255,255,127
   ]), 'data should be written with correct endianness');
 
+  t.end();
+});
+
+test('int64', function(t) {
+  ctx = new serializer.Context();
+ 
+  t.throws(() => serializer.int64(ctx, MAX_SAFE_INTEGER+1), 'throws on numbers too large to serialize exactly');
+  t.throws(() => serializer.int64(ctx, -MAX_SAFE_INTEGER-1), 'throws on numbers too small to serialize exactly');
+
+  var len =
+    serializer.int64(ctx, -MAX_SAFE_INTEGER) +
+    serializer.int64(ctx, -9980899) +
+    serializer.int64(ctx, 0) +
+    serializer.int64(ctx, 9980899) +
+    serializer.int64(ctx, MAX_SAFE_INTEGER);
+
+  t.equal(len, 40, 'len should tell us 40 bytes were written');
+
+  result = new Uint8Array(ctx.finalize());
+  
+  t.equal(result.length, 40, 'five int64s should be 40 bytes long');
+  t.deepEqual(result.slice(0, 8), new Uint8Array([
+    1, 0, 0, 0, 0, 0, 224, 255
+  ], '-MAX_SAFE_INTEGER was written correctly'));
+  t.deepEqual(result.slice(8, 16), new Uint8Array([
+    29, 180, 103, 255, 255, 255, 255, 255
+  ], '-9980899 was written correctly'));
+  t.deepEqual(result.slice(16, 24), new Uint8Array([
+    0, 0, 0, 0, 0, 0, 0, 0
+  ], '0 was written correctly'));
+  t.deepEqual(result.slice(24, 32), new Uint8Array([
+    227, 75, 152, 0, 0, 0, 0, 0
+  ], '9980899 was written correctly'));
+  t.deepEqual(result.slice(32, 40), new Uint8Array([
+    255, 255, 255, 255, 255, 255, 31, 0
+  ], 'MAX_SAFE_INTEGER was written correctly'));
   t.end();
 });
 
@@ -182,12 +232,12 @@ test('float64', function(t) {
   
   t.equal(result.length, 48, '6 float64s should be 48 bytes long');
   t.deepEqual(result, new Uint8Array([
-    0x3f, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-    0xc0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xf0, 0x3f,
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xc0,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-    0x3c, 0xb0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-    0x40, 0x09, 0x21, 0xfb, 0x5f, 0xff, 0x91, 0x68,
-    0xff, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xb0, 0x3c,
+    0x68, 0x91, 0xff, 0x5f, 0xfb, 0x21, 0x09, 0x40,
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xf0, 0xff
   ]), 'data should be written correctly');
 
   t.end();
@@ -205,7 +255,7 @@ test('uvarint', function(t) {
     serializer.uvarint(ctx, 128*128*128-1) +
     serializer.uvarint(ctx, 128*128*128) +
     serializer.uvarint(ctx, Math.pow(2,32)-1) +
-    serializer.uvarint(ctx, Number.MAX_SAFE_INTEGER);
+    serializer.uvarint(ctx, MAX_SAFE_INTEGER);
 
   t.equal(len, 29, 'the provided values should sum to 29 total bytes written');
 
@@ -231,7 +281,7 @@ test('svarint', function(t) {
   ctx = new serializer.Context();   
   
   // invalid values
-  t.throws(function() { serializer.svarint(Number.MAX_SAFE_INTEGER+1) }, 'values too large will throw');
+  t.throws(function() { serializer.svarint(MAX_SAFE_INTEGER+1) }, 'values too large will throw');
   t.throws(function() { serializer.svarint(Math.floor(Number.MIN_SAFE_INTEGER/2)-1) }, 'values too large on the negative side will throw' );
 
   var len = 
@@ -251,7 +301,7 @@ test('svarint', function(t) {
     serializer.svarint(ctx, -Math.pow(2,31)) +
     serializer.svarint(ctx, Math.pow(2,31)) + 
     serializer.svarint(ctx, Math.floor(Number.MIN_SAFE_INTEGER/2)) + 
-    serializer.svarint(ctx, Number.MAX_SAFE_INTEGER);
+    serializer.svarint(ctx, MAX_SAFE_INTEGER);
 
   t.equal(len, 47, 'the provided values should sum to 47 total bytes written');
 
@@ -282,24 +332,42 @@ test('svarint', function(t) {
 test('toString', function(t) {
   ctx = new serializer.Context();
   serializer.uint8(ctx, 0);
-  serializer.uint16(ctx, 0x0102);
-  serializer.uint32(ctx, 0x03040506);
+  serializer.uint16(ctx, 0x0102, true);
+  serializer.uint32(ctx, 0x03040506, true);
 
   t.equal(ctx.toString(), '00010203040506', 'serializer contents can be converted to a hex string for easy viewing');
 
   t.end();
 });
 
-test('buffer', function(t) {
+test('bytes', function(t) {
   ctx = new serializer.Context();
   
-  var len = serializer.buffer(ctx, new Uint8Array([1,2,3,4,5]).buffer);
+  var len = serializer.bytes(ctx, new Uint8Array([1,2,3,4,5]).buffer);
   t.equal(len, 5, '5 bytes appended from buffer');
   t.equal(ctx.toString(), '0102030405');    
 
-  t.throws(function() { serializer.buffer(new Uint8Array(16385)); }, 'buffers too large will throw')
+  t.throws(function() { serializer.bytes(new Uint8Array(16385)); }, 'buffers too large will throw')
 
   t.end();
+});
+
+test('publicKey', function(t) {
+  ctx = new serializer.Context();
+  
+  var len = serializer.publicKey(ctx, crypto.PublicKey.from('STM6RoGeVxoCGoSsNrW4XhTx6PQMxtf1bZV1bW9QxPiS6dSyuUBKF'));
+  t.equal(len, 64, '64 bytes appended from public key');
+
+  var data = new Uint8Array(ctx.finalize());
+
+  t.deepEqual(data, new Uint8Array([
+    202, 201, 108, 131, 96, 167, 75, 11, 25, 198, 93, 22, 193, 95, 155, 237, 174, 64,
+    227, 137, 176, 39, 6, 137, 13, 18, 104, 153, 58, 97, 137, 18, 67, 207, 25, 55,
+    193, 235, 255, 250, 230, 144, 73, 205, 70, 160, 254, 164, 97, 78, 223, 56, 112,
+    5, 107, 188, 173, 247, 45, 241, 90, 159, 73, 194
+  ]), 'public key punches down to raw bytes');
+  t.end();
+
 });
 
 test('rawString', function(t) {
@@ -384,7 +452,7 @@ test('date', function(t) {
 
   t.deepEqual(data, new Uint8Array([
     0x00, 0x00, 0x00, 0x00,
-    0x80, 0x00, 0x00, 0x00
+    0x00, 0x00, 0x00, 0x80
   ]), 'dates are naive 4-byte sequences');
 
   t.end(); 
@@ -484,3 +552,193 @@ test('object', function(t) {
 
   t.end();
 });
+
+test('void_t', function(t) {
+  ctx = new serializer.Context();
+
+  t.equal(serializer.void_t(ctx, null), 0, 'null serializes to no bytes');
+  t.equal(serializer.void_t(ctx, undefined), 0, 'undefined serializes to no bytes');
+ 
+  t.throws(function() { serializer.void_t(context, 0); }, 'numbers make void_t throw');
+  t.throws(function() { serializer.void_t(context, false); }, 'booleans make void_t throw');
+  t.throws(function() { serializer.void_t(context, ''); }, 'strings make void_t throw');
+  t.throws(function() { serializer.void_t(context, []); }, 'are we perhaps sensing a pattern here');
+
+  t.end();
+});
+
+test('staticVariant', function(t) {
+  ctx = new serializer.Context();
+
+  var s1 = serializer.staticVariant([
+    serializer.object([[ 'name', serializer.string ]]),
+    serializer.object([[ 'brillig', serializer.boolean ]])
+  ]);
+
+  t.throws(function() { s1(ctx, null); }, 'must supply an object');
+  t.throws(function() { s1(ctx, { type: 5 }); }, 'must supply a valid "type" property');
+
+  t.equal(s1(ctx, { type: 0, name: 'hello' }), 7, 'static variant overhead in this case is 1 byte');
+  t.equal(s1(ctx, { type: 1, brillig: true }), 2, 'again, 1 byte overhead');
+
+  var data = new Uint8Array(ctx.finalize());
+
+  t.deepEqual(data, new Uint8Array([
+    0x00, 0x05, 0x68, 0x65, 0x6c, 0x6c, 0x6f,
+    0x01, 0x01
+   ]), 'static variant types serialized ok');
+
+  t.end();  
+});
+
+test('asset', function(t) {
+  ctx = new serializer.Context();
+
+  t.throws(function() { serializer.asset(new serializer.Context(), { symbol: 'foo', amount: 99999}); }, 'must supply symbol, value, and precision');
+  t.throws(function() { serializer.asset(new serializer.Context(), { symbol: 'foobarb', amount: 99999, precision: 3}); }, 'symbol can only be 7 bytes long');
+   t.throws(function() { serializer.asset(new serializer.Context(), { symbol: 'fööö', amount: 99999, precision: 4}); }, 'yes I did say _bytes_');
+
+  serializer.asset(ctx, {
+    symbol: 'SBD',
+    amount: 12345,
+    precision: 3
+  });
+
+  var data = new Uint8Array(ctx.finalize());
+
+  t.equal(data.byteLength, 16, 'assets should be 16 bytes long');
+
+  t.deepEqual(data, new Uint8Array([
+    57, 48, 0, 0, 0, 0, 0, 0, 3, 83, 66, 68, 0, 0, 0, 0   
+  ]), 'asset serialized ok');
+  
+  t.end();  
+});
+
+test('authority', function(t) {
+  ctx = new serializer.Context();
+
+  serializer.authority(ctx, {
+    weight_threshold: 99999,
+    account_auths: [
+      [ 'goldibex', 5 ],
+      [ 'sneak', 10 ]
+    ],
+    key_auths: [
+      [ crypto.PublicKey.from('STM6RoGeVxoCGoSsNrW4XhTx6PQMxtf1bZV1bW9QxPiS6dSyuUBKF'), 1 ],
+    ]
+  });
+
+  var data = new Uint8Array(ctx.finalize());
+
+  t.deepEqual(data, new Uint8Array([
+    159, 134, 1, 0,
+    2,
+    8, 103, 111, 108, 100, 105, 98, 101, 120,
+    5, 0,
+    5, 115, 110, 101, 97, 107,
+    10, 0,
+    1,
+    202, 201, 108, 131, 96, 167, 75, 11, 25, 198, 93, 22, 193, 95, 155, 237, 174, 64,
+    227, 137, 176, 39, 6, 137, 13, 18, 104, 153, 58, 97, 137, 18, 67, 207, 25, 55,
+    193, 235, 255, 250, 230, 144, 73, 205, 70, 160, 254, 164, 97, 78, 223, 56, 112,
+    5, 107, 188, 173, 247, 45, 241, 90, 159, 73, 194,
+    1, 0
+  ]), 'authority serialized correctly');
+  t.end();  
+
+});
+
+test('beneficiary', function(t) {
+  ctx = new serializer.Context();
+
+  serializer.beneficiary(ctx, {
+    account: 'goldibex',
+    weight: 255
+  });
+
+  var data = new Uint8Array(ctx.finalize());
+
+  t.deepEqual(data, new Uint8Array([
+    8, 103, 111, 108, 100, 105, 98, 101, 120,
+    255, 0
+  ]), 'beneficiary serialized ok');
+
+  t.end();  
+});
+/*
+test('signedBlockHeader', function(t) {
+  ctx = new serializer.Context();
+
+  serializer.signedBlockHeader(ctx, {
+    account: 'goldibex',
+    weight: 65000
+  });
+
+  var data = new Uint8Array(ctx.finalize());
+
+  t.deepEqual(data, new Uint8Array([
+    0x00, 0x05, 0x68, 0x65, 0x6c, 0x6c, 0x6f,
+    0x01, 0x01
+  ]), 'signedBlockHeader serialized ok');
+
+  t.end();
+});
+
+test('price', function(t) {
+  ctx = new serializer.Context();
+
+  serializer.price(ctx, {
+    base: {
+  
+    },
+    quote: {
+
+    }
+  });
+
+  var data = new Uint8Array(ctx.finalize());
+
+  t.deepEqual(data, new Uint8Array([
+    0x00, 0x05, 0x68, 0x65, 0x6c, 0x6c, 0x6f,
+    0x01, 0x01
+  ]), 'price serialized ok');
+
+  t.end();
+});
+
+
+test('chainProperties', function(t) {
+  ctx = new serializer.Context();
+
+  serializer.chainProperties(ctx, {
+    previous: new Uint8Array(),
+    timestamp: new Date(),
+    witness: 'goldibex',
+    transaction_merkle_root: new Uint8Array(),
+    extensions: [],
+    witness_signature: new Uint8Array()
+  });
+
+ var data = new Uint8Array(ctx.finalize());
+
+  t.deepEqual(data, new Uint8Array([
+    0x00, 0x05, 0x68, 0x65, 0x6c, 0x6c, 0x6f,
+    0x01, 0x01
+  ]), 'chainProperties serialized ok');
+
+  t.end();
+});
+
+test('operation', function(t) {
+  ctx = new serializer.Context();
+
+  t.end();  
+});
+
+test('transaction', function(t) {
+  ctx = new serializer.Context();
+
+  t.end();  
+});
+*/

@@ -4,21 +4,18 @@ sjcl.codec.steemit = {
   MAINNET: {
     pubHeader: 0x0,
     secHeader: 0x80,
-    pubPrefix: 'STM' 
+    pubPrefix: 'STM'
   },
   TESTNET: {
     pubHeader: 0x0,
     secHeader: 0x80,
-    pubPrefix: 'TST' 
+    pubPrefix: 'TST'
   },
-  SECRET_HEADER: 0x80,
   keyChecksum: function(bits) {
     return sjcl.bitArray.bitSlice(sjcl.hash.ripemd160.hash(bits), 0, 32);
   },
 
-  keysFromPassword: function(account, password, net) {
-    net = net || sjcl.codec.steemit.MAINNET;
-
+  keysFromPassword: function(account, password) {
     var keyPairs = {};
     var CURVE = sjcl.ecc.curves.k256;
     for (var i = 0; i < sjcl.codec.steemit.ROLES.length; i++) {
@@ -44,22 +41,20 @@ sjcl.codec.steemit = {
     } else {
       header |= 0x2;
     }
-    return net.pubPrefix + 
+    return (
+      net.pubPrefix +
       sjcl.codec.base58Check.fromBits(
         header,
         point.x,
         sjcl.codec.steemit.keyChecksum
       )
-    ;
+    );
   },
 
   serializeSecretKey: function(key, net) {
     net = net || sjcl.codec.steemit.MAINNET;
 
-    return sjcl.codec.base58Check.fromBits(
-      net.secHeader,
-      key.get()
-    );
+    return sjcl.codec.base58Check.fromBits(net.secHeader, key.get());
   },
 
   deserializeSecretKey: function(wif, net) {
@@ -71,7 +66,7 @@ sjcl.codec.steemit = {
     if (headerByte !== net.secHeader) {
       throw new Error(
         'secret key has invalid header: wanted 0x' +
-          header.toString(16) +
+          headerByte.toString(16) +
           ', got 0x' +
           headerByte.toString(16)
       );
@@ -94,7 +89,9 @@ sjcl.codec.steemit = {
 
     if (pubKey.indexOf(net.pubPrefix) !== 0) {
       throw new Error(
-        'Public key is not in correct format, it should begin with "' + net.pubPrefix + '"'
+        'Public key is not in correct format, it should begin with "' +
+          net.pubPrefix +
+          '"'
       );
     }
 
@@ -104,9 +101,9 @@ sjcl.codec.steemit = {
     );
     var headerByte = sjcl.bitArray.extract(payload, 0, 8);
     var isOdd = headerByte == 0x3;
-    if (headerByte & net.pubHeader !== net.pubHeader) {
+    if (headerByte & (net.pubHeader !== net.pubHeader)) {
       throw new Error('public key has invalid header');
-    } else if (headerByte & 0x3 === 0 && headerByte & 0x2 === 0) {
+    } else if (headerByte & (0x3 === 0) && headerByte & (0x2 === 0)) {
       throw new Error(
         'public key has invalid header: should set 0x2 or 0x3, but got 0x' +
           headerByte.toString(16)
