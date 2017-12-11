@@ -10,7 +10,7 @@
     "fmt": "prettier --write '{src,scripts}/**/*.js' && eslint '{src,scripts}/**/*.js'",
     "build": "node ./scripts/build.js",
     "sjcl-test": "node ./scripts/test.js",
-    "test": "npm run build && npm run sjcl-test && tape 'test/{crypto,serializer}.test.js'"
+    "test": "npm run build && npm run sjcl-test && tape 'test/{crypto,serialize}.test.js'"
   },
   "devDependencies": {
     "eslint": "^4.10.0",

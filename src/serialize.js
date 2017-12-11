@@ -344,7 +344,7 @@
     for (var i = 0; i < choices.length; i++) {
       lookup[choices[i][0]] = {
         code: i,
-        serializer: choices[i][1]
+        serialize: choices[i][1]
       };
     }
  
@@ -354,7 +354,7 @@
       } else if (!lookup[value.type]) {
         throw new Error('Unknown type ' + value.type + ' for static variant');
       }
-      return uvarint(context, lookup[value.type].code) + lookup[value.type].serializer(context, value);
+      return uvarint(context, lookup[value.type].code) + lookup[value.type].serialize(context, value);
     };
   }
 

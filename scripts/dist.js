@@ -10,7 +10,7 @@ var file = require('./lib/file');
 var sets = [
   {
     out: 'steem-crypto',
-    files: ['lib/sjcl.js', 'lib/crypto.js', 'lib/serializer.js']
+    files: ['lib/sjcl.js', 'lib/crypto.js', 'lib/serialize.js']
   },
   {
     out: 'steemit.tiny',
