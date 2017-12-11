@@ -338,13 +338,23 @@
   }
 
   function staticVariant(choices) {
+
+    // generate lookup
+    var lookup = {};
+    for (var i = 0; i < choices.length; i++) {
+      lookup[choices[i][0]] = {
+        code: i,
+        serializer: choices[i][1]
+      };
+    }
+ 
     return function(context, value) {
       if (typeof value !== 'object' || value === null) {
         throw new Error('variant: cannot serialize null');
-      } else if (!choices[value.type]) {
+      } else if (!lookup[value.type]) {
         throw new Error('Unknown type ' + value.type + ' for static variant');
       }
-      return uvarint(context, value.type) + choices[value.type](context, value);
+      return uvarint(context, lookup[value.type].code) + lookup[value.type].serializer(context, value);
     };
   }
 
@@ -690,8 +700,7 @@
         ]
       ]
     ].map(function(def) {
-      var objectDef = def[1].slice().unshift(['id', uvarint]);
-      return [def[0], object(objectDef)];
+      return [def[0], object(def[1])];
     });
   }
 

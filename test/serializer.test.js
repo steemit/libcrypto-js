@@ -571,15 +571,15 @@ test('staticVariant', function(t) {
   ctx = new serializer.Context();
 
   var s1 = serializer.staticVariant([
-    serializer.object([[ 'name', serializer.string ]]),
-    serializer.object([[ 'brillig', serializer.boolean ]])
+    [ 'one', serializer.object([[ 'name', serializer.string ]]) ],
+    [ 'two', serializer.object([[ 'brillig', serializer.boolean ]]) ]
   ]);
 
   t.throws(function() { s1(ctx, null); }, 'must supply an object');
-  t.throws(function() { s1(ctx, { type: 5 }); }, 'must supply a valid "type" property');
+  t.throws(function() { s1(ctx, { type: 'three' }); }, 'must supply a valid "type" property');
 
-  t.equal(s1(ctx, { type: 0, name: 'hello' }), 7, 'static variant overhead in this case is 1 byte');
-  t.equal(s1(ctx, { type: 1, brillig: true }), 2, 'again, 1 byte overhead');
+  t.equal(s1(ctx, { type: 'one', name: 'hello' }), 7, 'static variant overhead in this case is 1 byte');
+  t.equal(s1(ctx, { type: 'two', brillig: true }), 2, 'again, 1 byte overhead');
 
   var data = new Uint8Array(ctx.finalize());
 
@@ -644,7 +644,7 @@ test('authority', function(t) {
     193, 235, 255, 250, 230, 144, 73, 205, 70, 160, 254, 164, 97, 78, 223, 56, 112,
     5, 107, 188, 173, 247, 45, 241, 90, 159, 73, 194,
     1, 0
-  ]), 'authority serialized correctly');
+  ]), 'authority serialized ok');
   t.end();  
 
 });
@@ -666,42 +666,55 @@ test('beneficiary', function(t) {
 
   t.end();  
 });
-/*
+
 test('signedBlockHeader', function(t) {
   ctx = new serializer.Context();
 
   serializer.signedBlockHeader(ctx, {
-    account: 'goldibex',
-    weight: 65000
+    previous: new Uint8Array([0,1,2,3]).buffer,
+    timestamp: new Date(0x5fffffff*1000),
+    witness: 'goldibex',
+    transaction_merkle_root: new Uint8Array([4,5,6,7]).buffer,
+    extensions: [],
+    witness_signature: new Uint8Array([8,9,10,11]).buffer
   });
 
   var data = new Uint8Array(ctx.finalize());
 
   t.deepEqual(data, new Uint8Array([
-    0x00, 0x05, 0x68, 0x65, 0x6c, 0x6c, 0x6f,
-    0x01, 0x01
+    0x0, 0x1, 0x2, 0x3,
+    0xff, 0xff, 0xff, 0x5f,
+    8, 103, 111, 108, 100, 105, 98, 101, 120,
+    0x4, 0x5, 0x6, 0x7,
+    0x0,
+    0x8, 0x9, 0xa, 0xb    
   ]), 'signedBlockHeader serialized ok');
 
   t.end();
 });
+
 
 test('price', function(t) {
   ctx = new serializer.Context();
 
   serializer.price(ctx, {
     base: {
-  
+      symbol: 'SBD',
+      amount: 12345,
+      precision: 3 
     },
     quote: {
-
+      symbol: 'SBD',
+      amount: 12345,
+      precision: 3
     }
   });
 
   var data = new Uint8Array(ctx.finalize());
 
   t.deepEqual(data, new Uint8Array([
-    0x00, 0x05, 0x68, 0x65, 0x6c, 0x6c, 0x6f,
-    0x01, 0x01
+    57, 48, 0, 0, 0, 0, 0, 0, 3, 83, 66, 68, 0, 0, 0, 0,
+    57, 48, 0, 0, 0, 0, 0, 0, 3, 83, 66, 68, 0, 0, 0, 0
   ]), 'price serialized ok');
 
   t.end();
@@ -713,18 +726,21 @@ test('chainProperties', function(t) {
 
   serializer.chainProperties(ctx, {
     previous: new Uint8Array(),
-    timestamp: new Date(),
-    witness: 'goldibex',
-    transaction_merkle_root: new Uint8Array(),
-    extensions: [],
-    witness_signature: new Uint8Array()
+    account_creation_fee: {
+      symbol: 'SBD',
+      amount: 12345,
+      precision: 3
+    },
+    maximum_block_size: 5,
+    sbd_interest_rate: 32
   });
 
  var data = new Uint8Array(ctx.finalize());
 
   t.deepEqual(data, new Uint8Array([
-    0x00, 0x05, 0x68, 0x65, 0x6c, 0x6c, 0x6f,
-    0x01, 0x01
+    57, 48, 0, 0, 0, 0, 0, 0, 3, 83, 66, 68, 0, 0, 0, 0,
+    5, 0, 0, 0,
+    32, 0  
   ]), 'chainProperties serialized ok');
 
   t.end();
@@ -733,12 +749,67 @@ test('chainProperties', function(t) {
 test('operation', function(t) {
   ctx = new serializer.Context();
 
+  serializer.operation(ctx, {
+    type: 'transfer', 
+    from: 'foo',
+    to: 'bar',
+    amount: {
+      symbol: 'SBD',
+      amount: 12345,
+      precision: 3,  
+    },
+    memo: 'wedding present'
+  });
+
+  var data = new Uint8Array(ctx.finalize());
+
+  t.deepEqual(data, new Uint8Array([
+    0x02,
+    0x03,0x66,0x6f,0x6f,
+    0x03,0x62,0x61,0x72,
+    57, 48, 0, 0, 0, 0, 0, 0, 3, 83, 66, 68, 0, 0, 0, 0,
+    0x0f,0x77,0x65,0x64,0x64,0x69,0x6e,0x67,0x20,0x70,0x72,0x65,0x73,0x65,0x6e,0x74
+  ]), 'operation serialized ok');
+
   t.end();  
 });
+
 
 test('transaction', function(t) {
   ctx = new serializer.Context();
 
+  serializer.transaction(ctx, {
+    ref_block_num: 5, 
+    ref_block_prefix: 10,
+    expiration: new Date(0x5fffffff*1000),
+    operations: [{
+      type: 'transfer', 
+      from: 'foo',
+      to: 'bar',
+      amount: {
+        symbol: 'SBD',
+        amount: 12345,
+        precision: 3,  
+      },
+      memo: 'wedding present'
+    }],
+    extensions: []
+  });
+
+  var data = new Uint8Array(ctx.finalize());
+
+  t.deepEqual(data, new Uint8Array([
+    5, 0,
+    10, 0, 0, 0,
+    0xff, 0xff, 0xff, 0x5f,
+    0x01,   
+    0x02,
+    0x03,0x66,0x6f,0x6f,
+    0x03,0x62,0x61,0x72,
+    57, 48, 0, 0, 0, 0, 0, 0, 3, 83, 66, 68, 0, 0, 0, 0,
+    0x0f,0x77,0x65,0x64,0x64,0x69,0x6e,0x67,0x20,0x70,0x72,0x65,0x73,0x65,0x6e,0x74,
+    0x0
+  ]), 'transaction serialized ok');
+
   t.end();  
 });
-*/
