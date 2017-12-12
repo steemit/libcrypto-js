@@ -39,12 +39,12 @@ ArrayBuffer { byteLength: 20 }
 '9c1185a5c5e9fc54612808977ee8f548b2258d31'
 ```
 
-### crypto.SecretKey
+### crypto.PrivateKey
 
 Provides operations over Steemit secp256k1-based ECC private keys.
 ```
-> secretKey = crypto.SecretKey.from('5JCDRqLdyX4W7tscyzyxav8EaqABSVAWLvfi7rdqMKJneqqwQGt')
-SecretKey { getPublicKey: [Function], sign: [Function] }
+> secretKey = crypto.PrivateKey.from('5JCDRqLdyX4W7tscyzyxav8EaqABSVAWLvfi7rdqMKJneqqwQGt')
+PrivateKey { getPublicKey: [Function], sign: [Function] }
 > secretKey.getPublicKey().toString()
 'STM5pZ15FDVAvNKW3saTJchWmSSmYtEvA6aKiXwDtCq2JRZV9KtR9'
 > secretSig = secretKey.sign(new Uint8Array(32).buffer)

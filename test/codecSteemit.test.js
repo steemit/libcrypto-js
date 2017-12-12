@@ -5,7 +5,7 @@ new sjcl.test.TestCase("steemit signature test vectors", function(cb) {
 
   sjcl.test.vector.steemitsig.forEach(function(fixture) {
   
-    var secretKey = sjcl.codec.steemit.deserializeSecretKey(fixture.secretKey);
+    var secretKey = sjcl.codec.steemit.deserializePrivateKey(fixture.secretKey);
     var publicKey = sjcl.codec.steemit.deserializePublicKey(fixture.publicKey);
 
     fixture.signatures.forEach(function(signature) {
@@ -47,7 +47,7 @@ new sjcl.test.TestCase("steemit signature test vectors", function(cb) {
 new sjcl.test.TestCase("steemit signature core functionality", function(cb) {
    
   var keys = {
-    sec: sjcl.codec.steemit.deserializeSecretKey("5JamTPvZyQsHf8c2pbN92F1gUY3sJkpW3ZJFzdmfbAJPAXT5aw3"),
+    sec: sjcl.codec.steemit.deserializePrivateKey("5JamTPvZyQsHf8c2pbN92F1gUY3sJkpW3ZJFzdmfbAJPAXT5aw3"),
     pub: sjcl.codec.steemit.deserializePublicKey("STM5SKxjN1YdrFLgoPcp9KteUmNVdgE8DpTPC9sF6jbjVqP9d2Utq")
   };
  
@@ -79,7 +79,7 @@ new sjcl.test.TestCase("steemit key codec tests", function (cb) {
       testValue.password
     );
 
-    var serializedSec = sjcl.codec.steemit.serializeSecretKey(keys[testValue.role].sec);
+    var serializedSec = sjcl.codec.steemit.serializePrivateKey(keys[testValue.role].sec);
     var serializedPub = sjcl.codec.steemit.serializePublicKey(keys[testValue.role].pub);
 
     this.require(testValue.sec == serializedSec, 'secret key: generated ' + serializedSec + ', expected ' + testValue.sec);
@@ -103,10 +103,10 @@ new sjcl.test.TestCase("steemit key codec tests", function (cb) {
     );
 
     // on deserialization the secret key should be the same
-    var deserializedSecretKey = sjcl.codec.steemit.deserializeSecretKey(serializedSec);
+    var deserializedPrivateKey = sjcl.codec.steemit.deserializePrivateKey(serializedSec);
     this.require(
       sjcl.bitArray.equal(
-        deserializedSecretKey.get(),
+        deserializedPrivateKey.get(),
         keys[testValue.role].sec.get()
       ),
       "original and deserialized secret keys are identical"

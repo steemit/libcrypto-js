@@ -23,7 +23,7 @@ test('crypto.generateKeys', function(t) {
 
   t.equal(keys.public.slice(0, 3), 'STM', 'generated public key is in steem format');
 
-  var sec = crypto.SecretKey.from(keys.secret);
+  var sec = crypto.PrivateKey.from(keys.secret);
   var pub = crypto.PublicKey.from(keys.public);
 
   var sig = sec.sign(testHash);
@@ -65,9 +65,10 @@ test('crypto.keysFromPassword', function(t) {
 });
 
 
-test('crypto.SecretKey', function(t) {
-  var sec = crypto.SecretKey.from('5JamTPvZyQsHf8c2pbN92F1gUY3sJkpW3ZJFzdmfbAJPAXT5aw3');
+test('crypto.PrivateKey', function(t) {
+  var sec = crypto.PrivateKey.from('5JamTPvZyQsHf8c2pbN92F1gUY3sJkpW3ZJFzdmfbAJPAXT5aw3');
   var pub = sec.getPublicKey();
+
   t.equal(
     pub.toString(),
     'STM5SKxjN1YdrFLgoPcp9KteUmNVdgE8DpTPC9sF6jbjVqP9d2Utq',
@@ -84,7 +85,7 @@ test('crypto.SecretKey', function(t) {
 });
 
 test('crypto.PublicKey', function(t) {
-  var sec = crypto.SecretKey.from('5JamTPvZyQsHf8c2pbN92F1gUY3sJkpW3ZJFzdmfbAJPAXT5aw3');
+  var sec = crypto.PrivateKey.from('5JamTPvZyQsHf8c2pbN92F1gUY3sJkpW3ZJFzdmfbAJPAXT5aw3');
   var pub = crypto.PublicKey.from('STM5SKxjN1YdrFLgoPcp9KteUmNVdgE8DpTPC9sF6jbjVqP9d2Utq');
 
   var failures = [];

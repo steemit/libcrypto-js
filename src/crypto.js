@@ -9,7 +9,7 @@
     factory((root.steemit.crypto = {}));
   }
 })(typeof self !== 'undefined' ? self : this, function(exports) {
-  exports.SecretKey = SecretKey;
+  exports.PrivateKey = PrivateKey;
   exports.PublicKey = PublicKey;
   exports.generateKeys = generateKeys;
   exports.keysFromPassword = keysFromPassword;
@@ -26,7 +26,7 @@
 
   exports.sjcl = sjcl;
 
-  function SecretKey(sec, pub) {
+  function PrivateKey(sec, pub) {
     // we deliberately avoid exposing secret key material on the instance.
     // this is paranoid and probably doesn't protect against a determined
     // attack, but why make things easy?
@@ -46,8 +46,8 @@
     };
   }
 
-  SecretKey.from = function(wif, header) {
-    return new SecretKey(sjcl.codec.steemit.deserializeSecretKey(wif, header));
+  PrivateKey.from = function(wif, header) {
+    return new PrivateKey(sjcl.codec.steemit.deserializePrivateKey(wif, header));
   };
 
   function PublicKey(pub) {
@@ -119,7 +119,7 @@
 
   function serializePair(k) {
     return {
-      secret: sjcl.codec.steemit.serializeSecretKey(k.sec),
+      secret: sjcl.codec.steemit.serializePrivateKey(k.sec),
       public: sjcl.codec.steemit.serializePublicKey(k.pub)
     };
   }
