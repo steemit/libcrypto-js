@@ -23,13 +23,13 @@ test('crypto.generateKeys', function(t) {
 
   t.equal(keys.public.slice(0, 3), 'STM', 'generated public key is in steem format');
 
-  var sec = crypto.SecretKey.from(keys.secret);
+  var sec = crypto.PrivateKey.from(keys.private);
   var pub = crypto.PublicKey.from(keys.public);
 
   var sig = sec.sign(testHash);
 
   t.equal(pub.verify(testHash, sig), true, 'public key can verify private key\'s signatures');
-  t.equal(pub.verify(testHash, testHash), false, 'public key rejects signatures not originating from secret key');
+  t.equal(pub.verify(testHash, testHash), false, 'public key rejects signatures not originating from private key');
 
   t.end();
 
@@ -37,7 +37,7 @@ test('crypto.generateKeys', function(t) {
 
 test('crypto.keysFromPassword', function(t) {
 
-  var secretKeys = [
+  var privateKeys = [
     ['owner', '5JCDRqLdyX4W7tscyzyxav8EaqABSVAWLvfi7rdqMKJneqqwQGt'],
     ['memo', '5JSmQQJXH5ZrSW3KJSTUPFJy7SuLeDiY3bW6vB1McamxzJQFhwD'],
     ['active', '5JamTPvZyQsHf8c2pbN92F1gUY3sJkpW3ZJFzdmfbAJPAXT5aw3'],
@@ -53,8 +53,8 @@ test('crypto.keysFromPassword', function(t) {
 
   var keys = crypto.keysFromPassword('username', 'password');
 
-  secretKeys.forEach(function(keyTest) {
-    t.equal(keys[keyTest[0]].secret, keyTest[1], keyTest[0] + ' secret key regenerated correctly');
+  privateKeys.forEach(function(keyTest) {
+    t.equal(keys[keyTest[0]].private, keyTest[1], keyTest[0] + ' private key regenerated correctly');
   });
 
   publicKeys.forEach(function(keyTest) {
@@ -65,34 +65,33 @@ test('crypto.keysFromPassword', function(t) {
 });
 
 
-test('crypto.SecretKey', function(t) {
-  var sec = crypto.SecretKey.from('5JamTPvZyQsHf8c2pbN92F1gUY3sJkpW3ZJFzdmfbAJPAXT5aw3');
+test('crypto.PrivateKey', function(t) {
+  var priv = crypto.PrivateKey.from('5JamTPvZyQsHf8c2pbN92F1gUY3sJkpW3ZJFzdmfbAJPAXT5aw3');
+  var pub = priv.getPublicKey();
+
   t.equal(
-    sec.getPublicKey().toString(),
+    pub.toString(),
     'STM5SKxjN1YdrFLgoPcp9KteUmNVdgE8DpTPC9sF6jbjVqP9d2Utq',
     'regenerates public key correctly'
   );
-
+  
   var emptySha = crypto.sha256(new Uint8Array().buffer);
 
-  t.equal(sec.sign(emptySha).byteLength, 64, 'signatures are 64 bytes long');
-  t.equal(
-    sec.getPublicKey().verify(emptySha, sec.sign(emptySha)),
-    true,
-    'public key verifies private key signatures'
-  );
-
+  var sig = priv.sign(emptySha);
+  t.equal(sig.byteLength, 65, 'signatures are 65 bytes long');
+  var recoveredKey = crypto.PublicKey.recover(emptySha, sig);
+  t.equal(pub.toString(), recoveredKey.toString(), 'recovers public key correctly');
   t.end();
 });
 
 test('crypto.PublicKey', function(t) {
-  var sec = crypto.SecretKey.from('5JamTPvZyQsHf8c2pbN92F1gUY3sJkpW3ZJFzdmfbAJPAXT5aw3');
+  var priv = crypto.PrivateKey.from('5JamTPvZyQsHf8c2pbN92F1gUY3sJkpW3ZJFzdmfbAJPAXT5aw3');
   var pub = crypto.PublicKey.from('STM5SKxjN1YdrFLgoPcp9KteUmNVdgE8DpTPC9sF6jbjVqP9d2Utq');
 
   var failures = [];
   for (var i = 0; i < 64; i++) {
     var hash = (new Uint8Array(32).fill(i)).buffer;
-    var sig = sec.sign(hash);
+    var sig = priv.sign(hash);
     if (!pub.verify(hash, sig)) {
       failures.push({
         hash: hash,
