@@ -67,21 +67,20 @@ test('crypto.keysFromPassword', function(t) {
 
 test('crypto.PrivateKey', function(t) {
   var sec = crypto.PrivateKey.from('5JamTPvZyQsHf8c2pbN92F1gUY3sJkpW3ZJFzdmfbAJPAXT5aw3');
+  var pub = sec.getPublicKey();
+
   t.equal(
-    sec.getPublicKey().toString(),
+    pub.toString(),
     'STM5SKxjN1YdrFLgoPcp9KteUmNVdgE8DpTPC9sF6jbjVqP9d2Utq',
     'regenerates public key correctly'
   );
-
+  
   var emptySha = crypto.sha256(new Uint8Array().buffer);
 
-  t.equal(sec.sign(emptySha).byteLength, 64, 'signatures are 64 bytes long');
-  t.equal(
-    sec.getPublicKey().verify(emptySha, sec.sign(emptySha)),
-    true,
-    'public key verifies private key signatures'
-  );
-
+  var sig = sec.sign(emptySha);
+  t.equal(sig.byteLength, 65, 'signatures are 65 bytes long');
+  var recoveredKey = crypto.PublicKey.recover(emptySha, sig);
+  t.equal(pub.toString(), recoveredKey.toString(), 'recovers public key correctly');
   t.end();
 });
 
