@@ -53,18 +53,16 @@ sjcl.codec.steemit = {
     ;
   },
 
-  serializeSecretKey: function(key, net) {
+  serializePrivateKey: function(key, net) {
     net = net || sjcl.codec.steemit.MAINNET;
-
     return sjcl.codec.base58Check.fromBits(
       net.privHeader,
       key.get()
     );
   },
 
-  deserializeSecretKey: function(wif, net) {
-    net = net || sjcl.codec.steemit.MAINNET;
-
+  deserializePrivateKey: function(wif, header) {
+    header = header || sjcl.codec.steemit.HEADER;
     var curve = sjcl.ecc.curves.k256;
     var payload = sjcl.codec.base58Check.toBits(wif);
     var headerByte = sjcl.bitArray.extract(payload, 0, 8);
