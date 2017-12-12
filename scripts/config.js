@@ -31,8 +31,8 @@ exports.sjclTestFileList = [
   exports.sjclPrefix + 'util.js',
   exports.sjclPrefix + 'test.js',
   // our tests
-  './test/codecSteemit.vector.test.js',
-  './test/codecBase58.test.js',
-  './test/codecBase58Check.test.js',
-  './test/codecSteemit.test.js'
+  './test/sjcl/codecSteemit.vector.test.js',
+  './test/sjcl/codecBase58.test.js',
+  './test/sjcl/codecBase58Check.test.js',
+  './test/sjcl/codecSteemit.test.js'
 ];
