@@ -5,12 +5,12 @@
   "main": "lib/crypto.js",
   "license": "MIT",
   "scripts": {
-    "prepublish": "npm run build",
+    "prepublish": "./scripts/build.js",
     "clean": "rm -Rf lib",
     "fmt": "prettier --write '{src,scripts}/**/*.js' && eslint '{src,scripts}/**/*.js'",
-    "build": "node ./scripts/build.js",
-    "sjcl-test": "node ./scripts/test.js",
-    "test": "npm run build && npm run sjcl-test && tape test/crypto.test.js"
+    "build": "./scripts/build.js",
+    "sjcl-test": "./scripts/test.js",
+    "test": "./scripts/build.js && ./scripts/test.js && ./scripts/test.js && tape 'test/*.test.js'"
   },
   "devDependencies": {
     "eslint": "^4.10.0",
