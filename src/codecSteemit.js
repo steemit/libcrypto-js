@@ -62,11 +62,11 @@ sjcl.codec.steemit = {
   },
 
   deserializePrivateKey: function(wif, header) {
-    header = header || sjcl.codec.steemit.HEADER;
+    header = header || sjcl.codec.steemit.MAINNET.privHeader;
     var curve = sjcl.ecc.curves.k256;
     var payload = sjcl.codec.base58Check.toBits(wif);
     var headerByte = sjcl.bitArray.extract(payload, 0, 8);
-    if (headerByte !== net.privHeader) {
+    if (headerByte !== header) {
       throw new Error(
         'private key has invalid header: wanted 0x' +
           header.toString(16) +
