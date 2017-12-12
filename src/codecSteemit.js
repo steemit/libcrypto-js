@@ -3,12 +3,12 @@ sjcl.codec.steemit = {
   ROLES: ['owner', 'memo', 'active', 'posting'],
   MAINNET: {
     pubHeader: 0x0,
-    secHeader: 0x80,
+    privHeader: 0x80,
     pubPrefix: 'STM' 
   },
   TESTNET: {
     pubHeader: 0x0,
-    secHeader: 0x80,
+    privHeader: 0x80,
     pubPrefix: 'TST' 
   },
   SECRET_HEADER: 0x80,
@@ -57,7 +57,7 @@ sjcl.codec.steemit = {
     net = net || sjcl.codec.steemit.MAINNET;
 
     return sjcl.codec.base58Check.fromBits(
-      net.secHeader,
+      net.privHeader,
       key.get()
     );
   },
@@ -68,9 +68,9 @@ sjcl.codec.steemit = {
     var curve = sjcl.ecc.curves.k256;
     var payload = sjcl.codec.base58Check.toBits(wif);
     var headerByte = sjcl.bitArray.extract(payload, 0, 8);
-    if (headerByte !== net.secHeader) {
+    if (headerByte !== net.privHeader) {
       throw new Error(
-        'secret key has invalid header: wanted 0x' +
+        'private key has invalid header: wanted 0x' +
           header.toString(16) +
           ', got 0x' +
           headerByte.toString(16)
