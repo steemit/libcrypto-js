@@ -16,7 +16,7 @@ new sjcl.test.TestCase("steemit key codec tests", function (cb) {
       testValue.password
     );
 
-    var serializedSec = sjcl.codec.steemit.serializeSecretKey(keys[testValue.role].sec);
+    var serializedSec = sjcl.codec.steemit.serializePrivateKey(keys[testValue.role].sec);
     var serializedPub = sjcl.codec.steemit.serializePublicKey(keys[testValue.role].pub);
 
     this.require(testValue.sec == serializedSec, 'secret key: generated ' + serializedSec + ', expected ' + testValue.sec);
@@ -40,10 +40,10 @@ new sjcl.test.TestCase("steemit key codec tests", function (cb) {
     );
 
     // on deserialization the secret key should be the same
-    var deserializedSecretKey = sjcl.codec.steemit.deserializeSecretKey(serializedSec);
+    var deserializedPrivateKey = sjcl.codec.steemit.deserializePrivateKey(serializedSec);
     this.require(
       sjcl.bitArray.equal(
-        deserializedSecretKey.get(),
+        deserializedPrivateKey.get(),
         keys[testValue.role].sec.get()
       ),
       "original and deserialized secret keys are identical"

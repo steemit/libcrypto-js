@@ -42,14 +42,14 @@ sjcl.codec.steemit = {
     );
   },
 
-  serializeSecretKey: function(key, header) {
+  serializePrivateKey: function(key, header) {
     return sjcl.codec.base58Check.fromBits(
       header || sjcl.codec.steemit.HEADER,
       key.get()
     );
   },
 
-  deserializeSecretKey: function(wif, header) {
+  deserializePrivateKey: function(wif, header) {
     header = header || sjcl.codec.steemit.HEADER;
     var curve = sjcl.ecc.curves.k256;
     var payload = sjcl.codec.base58Check.toBits(wif);
