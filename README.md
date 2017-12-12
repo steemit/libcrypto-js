@@ -1,10 +1,14 @@
 
-A small vendoring wrapper for [sjcl]() with support for hashes and encodings
-required by the Steem platform.
+libcrypto
+=========
+
+A small vendoring wrapper for [sjcl](http://bitwiseshiftleft.github.io/sjcl/) with support for
+hashes and encodings required by the Steem platform.
 
 ## Usage
 
-If you are using Webpack or Browserify, you MUST SHIM THE NODE `'crypto'` PACKAGE.
+If you are using Webpack or Browserify, you must ensure that Node's built-in `crypto` package
+is excluded from your builds. 
 
 Otherwise, just
 ```sh
@@ -14,7 +18,7 @@ $ yarn install steem-crypto
 ## API
 
 ```
-> crypto = require('steem-crypto');
+> crypto = require('@steemit/libcrypto');
 ```
 
 ### crypto.sha256(data)
@@ -72,8 +76,8 @@ random number generation.
 ```
 > crypto.generateKeys()
 {
-  "secret": "5JCDRqLdyX4W7tscyzyxav8EaqABSVAWLvfi7rdqMKJneqqwQGt",
-  "public": "STM5pZ15FDVAvNKW3saTJchWmSSmYtEvA6aKiXwDtCq2JRZV9KtR9"
+  private: "5JCDRqLdyX4W7tscyzyxav8EaqABSVAWLvfi7rdqMKJneqqwQGt",
+  public: "STM5pZ15FDVAvNKW3saTJchWmSSmYtEvA6aKiXwDtCq2JRZV9KtR9"
 }
 ```
 
@@ -84,16 +88,16 @@ Given a Steemit account name and password, regenerates the derived `owner`, `pos
 ```
 > crypto.keysFromPassword('username', 'password')
 { owner:
-   { secret: '5JCDRqLdyX4W7tscyzyxav8EaqABSVAWLvfi7rdqMKJneqqwQGt',
+   { private: '5JCDRqLdyX4W7tscyzyxav8EaqABSVAWLvfi7rdqMKJneqqwQGt',
      public: 'STM5pZ15FDVAvNKW3saTJchWmSSmYtEvA6aKiXwDtCq2JRZV9KtR9' },
   memo:
-   { secret: '5JSmQQJXH5ZrSW3KJSTUPFJy7SuLeDiY3bW6vB1McamxzJQFhwD',
+   { private: '5JSmQQJXH5ZrSW3KJSTUPFJy7SuLeDiY3bW6vB1McamxzJQFhwD',
      public: 'STM5nwJgD9jmkAdTXuiz3jqrkw3om95gCapZo4e4Bcp3qzyiedwCn' },
   posting:
-   { secret: '5HsoxWiHRRyx6oSxKj32HDqDMzSGhs79zLZopDc7nMcjMbcPp5E',
+   { private: '5HsoxWiHRRyx6oSxKj32HDqDMzSGhs79zLZopDc7nMcjMbcPp5E',
      public: 'STM6gZmazY23TEMkxmPpnmvbAgWFAzwtaSDbhSUdmpTXzoJJLPFH4' },
   active:
-   { secret: '5JamTPvZyQsHf8c2pbN92F1gUY3sJkpW3ZJFzdmfbAJPAXT5aw3',
+   { private: '5JamTPvZyQsHf8c2pbN92F1gUY3sJkpW3ZJFzdmfbAJPAXT5aw3',
      public: 'STM5SKxjN1YdrFLgoPcp9KteUmNVdgE8DpTPC9sF6jbjVqP9d2Utq' } }
 ```
 
@@ -104,7 +108,7 @@ steem-crypto is written in Javascript as specified by
 Other than its vendored copy of sjcl, it has no dependencies and never will.
 
 steem-crypto explicitly supports the following environments without polyfills:
-- [Node.js](https://nodejs.com) (versions 4 and up)
+- [Node.js](https://nodejs.com) versions 4 and up
 - Microsoft Edge (all versions)
 - Safari for macOS versions 7.1+
 - Safari for iOS versions 8+
@@ -120,5 +124,5 @@ steem-crypto explicitly does not support the following environments:
 Contributions must conform to the following rules:
 - They must pass formatting and linting and the existing automated test suite must pass.
 - They must add test coverage for new code.
-- They must not introduce any new dependencies or development dependencies.
+- They must not introduce any new dependencies.
 - They must support the environments listed above without the use of polyfills.

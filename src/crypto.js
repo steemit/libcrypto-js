@@ -26,8 +26,8 @@
 
   exports.sjcl = sjcl;
 
-  function PrivateKey(sec, pub) {
-    // we deliberately avoid exposing secret key material on the instance.
+  function PrivateKey(priv, pub) {
+    // we deliberately avoid exposing private key material on the instance.
     // this is paranoid and probably doesn't protect against a determined
     // attack, but why make things easy?
     this.getPublicKey = function() {
@@ -35,14 +35,14 @@
         pub = sjcl.ecc.ecdsa.generateKeys(
           sjcl.ecc.curves.k256,
           undefined,
-          sjcl.bn.fromBits(sec.get())
+          sjcl.bn.fromBits(priv.get())
         ).pub;
       }
       return new PublicKey(pub);
     };
 
     this.sign = function(hash) {
-      return fromBits(sjcl.codec.steemit.signRecoverably(sec, toBits(hash)));
+      return fromBits(sjcl.codec.steemit.signRecoverably(priv, toBits(hash)));
     };
   }
 
@@ -121,7 +121,7 @@
 
   function serializePair(k) {
     return {
-      secret: sjcl.codec.steemit.serializePrivateKey(k.sec),
+      private: sjcl.codec.steemit.serializePrivateKey(k.sec),
       public: sjcl.codec.steemit.serializePublicKey(k.pub)
     };
   }
