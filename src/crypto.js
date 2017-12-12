@@ -47,7 +47,9 @@
   }
 
   PrivateKey.from = function(wif, header) {
-    return new PrivateKey(sjcl.codec.steemit.deserializePrivateKey(wif, header));
+    return new PrivateKey(
+      sjcl.codec.steemit.deserializePrivateKey(wif, header)
+    );
   };
 
   function PublicKey(pub) {
