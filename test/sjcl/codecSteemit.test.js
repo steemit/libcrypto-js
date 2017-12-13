@@ -18,15 +18,6 @@ new sjcl.test.TestCase("steemit signature test vectors", function(cb) {
 
       var generatedSig = sjcl.codec.steemit.signRecoverably(secretKey, hash, 0, k);
 
-      self.require(
-        sjcl.bitArray.equal(sjcl.bitArray.bitSlice(generatedSig, 8, 264), r.toBits(256)),
-        'our recoverably generated r is identical to the nonrecoverably generated one'
-      );
-      self.require(
-        sjcl.bitArray.equal(sjcl.bitArray.bitSlice(generatedSig, 264), s.toBits(256)),
-        'our recoverably generated s is identical to the nonrecoverably generated one'
-      );
-
       var recoveredPublicKey = sjcl.codec.steemit.recoverPublicKey(hash, generatedSig);
 
       publicKey.verify(hash, sjcl.bitArray.bitSlice(generatedSig, 8));
