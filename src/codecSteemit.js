@@ -29,8 +29,6 @@ sjcl.codec.steemit = {
     return keyPairs;
   },
 
-  // this should be IDENTICAL to SJCL's signing algorithm with the
-  // exception that we preserve the parity of R.y
   signRecoverably: function(sec, hash, paranoia, fixedKForTesting) {
     /*
      * an explanation of the format of the recovery parameter.
@@ -66,24 +64,53 @@ sjcl.codec.steemit = {
     if (sjcl.bitArray.bitLength(hash) > this._curveBitLength) {
       hash = sjcl.bitArray.clamp(hash, this._curveBitLength);
     }
-    var CURVE = sjcl.ecc.curves.k256,
-      n = CURVE.r,
-      l = n.bitLength(),
-      k = fixedKForTesting || sjcl.bn.random(n.sub(1), paranoia).add(1),
-      R = CURVE.G.mult(k),
-      r = R.x.mod(n),
-      ss = sjcl.bn.fromBits(hash).add(r.mul(sec._exponent)),
-      s = ss.mul(k.inverseMod(n)).mod(n),
-      isOdd = R.y.limbs[0] & (0x1 == 1),
-      recoveryParam = 31;
-    if (isOdd) {
-      recoveryParam++;
-    }
-    var rawSig = sjcl.bitArray.concat(r.toBits(l), s.toBits(l));
-    return sjcl.bitArray.concat(
-      [sjcl.bitArray.partial(8, recoveryParam)],
-      rawSig
-    );
+
+    while (true) {
+
+      var CURVE = sjcl.ecc.curves.k256,
+        n = CURVE.r,
+        l = n.bitLength(),
+        k = fixedKForTesting || sjcl.bn.random(n.sub(1), paranoia).add(1),
+        R = CURVE.G.mult(k);
+
+      if (fixedKForTesting) {
+        fixedKForTesting = fixedKForTesting.add(1);
+      }
+      
+      if (R.isIdentity) {
+        continue;
+      }
+
+      var r = R.x.mod(n),
+        ss = sjcl.bn.fromBits(hash).add(r.mul(sec._exponent)),
+        s = ss.mul(k.inverseMod(n)).mod(n),
+        isOdd = R.y.limbs[0] & (0x1 == 1),
+        recoveryParam = 31;
+
+        if (isOdd) {
+          recoveryParam++;
+        }
+   
+        var rBitArray = r.toBits(l);
+        var sBitArray = s.toBits(l);
+
+        var r0 = sjcl.bitArray.extract(rBitArray, 0, 8);
+        var r1 = sjcl.bitArray.extract(rBitArray, 8, 8);
+        var s0 = sjcl.bitArray.extract(sBitArray, 0, 8);
+        var s1 = sjcl.bitArray.extract(sBitArray, 8, 8);
+            
+        if (!(r0 & 0x80)
+          && !(r0 == 0 && !(r1 & 0x80))
+          && !(s0 & 0x80)
+          && !(s0 == 0 && !(s1 & 0x80))) {
+          var rawSig = sjcl.bitArray.concat(r.toBits(l), s.toBits(l));
+      
+          return sjcl.bitArray.concat(
+            [sjcl.bitArray.partial(8, recoveryParam)],
+            rawSig
+          );
+        }
+     }
   },
 
   recoverPublicKey: function(hash, sig) {
