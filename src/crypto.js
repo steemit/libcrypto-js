@@ -70,6 +70,10 @@
     toString: function() {
       return sjcl.codec.steemit.serializePublicKey(this._p);
     },
+    toArrayBuffer: function() {
+      var bits = this._p.get();
+      return fromBits(sjcl.bitArray.concat(bits.x, bits.y));
+    },
     verify: function(hash, signature) {
       try {
         var rawSig = sjcl.bitArray.bitSlice(toBits(signature), 8);

@@ -18,6 +18,9 @@ function build() {
   return file
     .mkdirP('lib')
     .then(function() {
+      return file.copy('src/serialize.js', 'lib/serialize.js');
+    })
+    .then(function() {
       return file.concat(config.sjclFileList);
     })
     .then(function(contents) {
