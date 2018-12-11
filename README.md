@@ -3,7 +3,7 @@ libcrypto
 =========
 
 A small vendoring wrapper for [sjcl](http://bitwiseshiftleft.github.io/sjcl/) with support for
-hashes and encodings required by the Steem platform.
+hashes and encodings required by the Knowledgr platform.
 
 ## Usage
 
@@ -18,7 +18,7 @@ $ yarn install steem-crypto
 ## API
 
 ```
-> crypto = require('@steemit/libcrypto');
+> crypto = require('@knowledgr/libcrypto');
 ```
 
 ### crypto.sha256(data)
@@ -45,7 +45,7 @@ ArrayBuffer { byteLength: 20 }
 
 ### crypto.PrivateKey
 
-Provides operations over Steemit secp256k1-based ECC private keys.
+Provides operations over Knowledgr secp256k1-based ECC private keys.
 ```
 > secretKey = crypto.PrivateKey.from('5JCDRqLdyX4W7tscyzyxav8EaqABSVAWLvfi7rdqMKJneqqwQGt')
 PrivateKey { getPublicKey: [Function], sign: [Function] }
@@ -59,7 +59,7 @@ ArrayBuffer { byteLength: 65 }
 
 ### crypto.PublicKey
 
-Provides operations over Steemit secp256k1-based ECC public keys.
+Provides operations over Knowledgr secp256k1-based ECC public keys.
 ```
 > publicKey = crypto.PublicKey.from('STM5SKxjN1YdrFLgoPcp9KteUmNVdgE8DpTPC9sF6jbjVqP9d2Utq')
 ... 
@@ -71,7 +71,7 @@ true
 
 ### crypto.generateKeys()
 
-Generates a new pair of keys in Steem WIF format using cryptographically secure
+Generates a new pair of keys in Knowledgr WIF format using cryptographically secure
 random number generation.
 ```
 > crypto.generateKeys()
@@ -83,7 +83,7 @@ random number generation.
 
 ### crypto.keysFromPassword(accountName, accountPassword)
 
-Given a Steemit account name and password, regenerates the derived `owner`, `posting`,
+Given a Knowledgr account name and password, regenerates the derived `owner`, `posting`,
 `active`, and `memo` keys.
 ```
 > crypto.keysFromPassword('username', 'password')
