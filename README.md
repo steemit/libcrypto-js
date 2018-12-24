@@ -12,7 +12,7 @@ is excluded from your builds.
 
 Otherwise, just
 ```sh
-$ yarn install steem-crypto
+$ yarn add @steemit/libcrypto
 ```
 
 ## API
